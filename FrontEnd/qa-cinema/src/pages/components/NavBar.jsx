@@ -2,10 +2,12 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
+import Upcoming from "../Upcoming";
 import About from "../About";
 import Bookings from "../Bookings";
 import Discussions from "../Discussion";
 import GettingThere from "../GettingThere";
+
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -27,6 +29,9 @@ const NavBar = () => {
                 <NavDropdown title="Movies" id="basic-nav-dropdown">
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/upcoming"}>
+                    Upcoming
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
@@ -54,6 +59,9 @@ const NavBar = () => {
           </Route>
           <Route path="/listings">
             <Listings />
+          </Route>
+          <Route path="/upcoming">
+            <Upcoming />
           </Route>
           <Route path="/about">
             <About />
