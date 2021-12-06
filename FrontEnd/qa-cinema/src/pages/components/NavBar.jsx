@@ -3,6 +3,9 @@ import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
 import About from "../About";
+import Bookings from "../Bookings";
+import Discussions from "../Discussion";
+import GettingThere from "../GettingThere";
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -11,35 +14,34 @@ const NavBar = () => {
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand as={Link} to={"/home"}>
+            <Navbar.Brand as={Link} to={"/"}>
               Qa Cinema
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">
-                <Nav.Link as={Link} to={"/home"}>
+                <Nav.Link as={Link} to={"/"}>
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/listings"}>
-                  Listings
+                {/* maybe move these around or delete the dropdown? */}
+                <NavDropdown title="Movies" id="basic-nav-dropdown">
+                  <NavDropdown.Item as={Link} to={"/listings"}>
+                    Listings
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/booking"}>
+                    Bookings
+                  </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/discussions"}>
+                    Discussions
+                  </NavDropdown.Item>
+                  <NavDropdown.Divider />
+                </NavDropdown>
+                <Nav.Link as={Link} to={"/gettingThere"}>
+                  Find Us
                 </Nav.Link>
                 <Nav.Link as={Link} to={"/about"}>
                   About
                 </Nav.Link>
-                {/* maybe move these around or delete the dropdown? */}
-                <NavDropdown title="Dropdown" id="basic-nav-dropdown">
-                  <NavDropdown.Item href="#action/3.1">Action</NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.2">
-                    Another action
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href="#action/3.3">
-                    Something
-                  </NavDropdown.Item>
-                  <NavDropdown.Divider />
-                  <NavDropdown.Item href="#action/3.4">
-                    Separated link
-                  </NavDropdown.Item>
-                </NavDropdown>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -47,7 +49,7 @@ const NavBar = () => {
       </div>
       <div>
         <Switch>
-          <Route path="/home">
+          <Route path="/" exact>
             <Home />
           </Route>
           <Route path="/listings">
@@ -55,6 +57,15 @@ const NavBar = () => {
           </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/booking">
+            <Bookings />
+          </Route>
+          <Route path="/discussions">
+            <Discussions />
+          </Route>
+          <Route path="/gettingThere">
+            <GettingThere />
           </Route>
         </Switch>
       </div>
