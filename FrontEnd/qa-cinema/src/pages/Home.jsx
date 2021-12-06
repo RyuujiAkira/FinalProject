@@ -6,6 +6,7 @@ const Home = () => {
             
 
             <h2>Home</h2>
+            <p> Welcome to QA Cinemas the UK's Number 1 cinema!  </p>
             
     <Carousel>
                 <Carousel.Item>
