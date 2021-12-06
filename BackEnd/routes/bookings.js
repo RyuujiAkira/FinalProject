@@ -26,7 +26,7 @@ router.post('/create', (req, res, next) => {
 router.get('/getAll', (req, res) => {
 
 
-    lizard.find((error, bookingList) => {
+    MongoBookings.find((error, bookingList) => {
         if (error) {
             console.log(`error :( : ${error}`);
         }
