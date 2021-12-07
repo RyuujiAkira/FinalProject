@@ -12,7 +12,7 @@ const NavBar = () => {
   return (
     <Router>
       <div>
-        <Navbar bg="light" expand="lg">
+        <Navbar bg="light" expand="lg"  >
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
               Qa Cinema

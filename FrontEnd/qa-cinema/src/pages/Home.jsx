@@ -1,14 +1,15 @@
 import { Carousel } from "react-bootstrap";
 import { Card } from "react-bootstrap";
+import "../style.css";
 const Home = () => {
     return (
-        <div>
+        <div id = "Homebody" >
             
 
             <h2>Home</h2>
             <p> Welcome to QA Cinemas the UK's Number 1 cinema!  </p>
             
-    <Carousel>
+    <Carousel id = "featuredCaro">
                 <Carousel.Item>
                     
                   
