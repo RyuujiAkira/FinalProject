@@ -6,19 +6,19 @@ const Listings = () => {
   //   Have api calls in here?
   return (
 
-    <div>
-      
+    <div id="listingsBody">
 
-      
 
-     
-      
 
-      
-      
-      
 
-      
+
+
+
+
+
+
+
+
       <Container>
         <Row>
           <Col>
@@ -29,19 +29,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -56,19 +56,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -84,19 +84,19 @@ const Listings = () => {
               <Card.Text>
                 Movie synopsis
               </Card.Text>
-              <Button variant="primary">16:30</Button>
+              <Button variant="primary" id="listingTimeBTN">16:30</Button>
               <br></br>
               <br></br>
-              <Button variant="primary">17:45</Button>
+              <Button variant="primary" id="listingTimeBTN">17:45</Button>
               <br></br>
               <br></br>
-              <Button variant="primary">18:00</Button>
+              <Button variant="primary" id="listingTimeBTN">18:00</Button>
               <br></br>
               <br></br>
-              <Button variant="primary">19:00</Button>
+              <Button variant="primary" id="listingTimeBTN">19:00</Button>
               <br></br>
               <br></br>
-              <Button variant="primary">21:30</Button>
+              <Button variant="primary" id="listingTimeBTN">21:30</Button>
             </Card.Body>
           </Card>
             <br></br>
@@ -110,19 +110,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -139,19 +139,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -165,19 +165,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -194,19 +194,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
           </Col>
@@ -218,19 +218,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -247,19 +247,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
@@ -273,19 +273,19 @@ const Listings = () => {
                 <Card.Text>
                   Movie synopsis
                 </Card.Text>
-                <Button variant="primary">16:30</Button>
+                <Button variant="primary" id="listingTimeBTN">16:30</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">17:45</Button>
+                <Button variant="primary" id="listingTimeBTN">17:45</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">18:00</Button>
+                <Button variant="primary" id="listingTimeBTN">18:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">19:00</Button>
+                <Button variant="primary" id="listingTimeBTN">19:00</Button>
                 <br></br>
                 <br></br>
-                <Button variant="primary">21:30</Button>
+                <Button variant="primary" id="listingTimeBTN">21:30</Button>
               </Card.Body>
             </Card>
             <br></br>
