@@ -2,6 +2,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
+import NewListings from "../newListings";
 import About from "../About";
 import Bookings from "../Bookings";
 import Discussion from "../Discussion";
@@ -30,8 +31,8 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to={"/newlistings"}>
-                    newListings
+                  <NavDropdown.Item as={Link} to={"/NewListings"}>
+                    NewListings
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
@@ -67,8 +68,8 @@ const NavBar = () => {
           <Route path="/listings">
             <Listings />
           </Route>
-          <Route path="/newlistings">
-            <newListings />
+          <Route path="/NewListings">
+            <NewListings />
           </Route>
           <Route path="/about">
             <About />

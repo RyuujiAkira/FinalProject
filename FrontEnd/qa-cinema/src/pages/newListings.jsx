@@ -1,7 +1,9 @@
-const Listings = () => {
+const newListings = () => {
 
   //   Have api calls in here?
-  return <> <h5>Below is the listings gallery. All the current movies out now!</h5>
+  return (
+  <div>
+  <h5>Below is the listings gallery. All the current movies out now!</h5>
   <div class="row">
 <div class="px-4">
   <img width="300px" height="450px" src="https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg" ></img>
@@ -10,7 +12,7 @@ const Listings = () => {
   <p>Directed by: Christopher Nolan </p>
   </div>
   <div class="px-3">
-  <img width="300px" height="450px" src="https://lh3.googleusercontent.com/proxy/eGfQdANPba-zKNVQ7TPa5YYRBNxP213cIlgRVB4020dZu9j0uzICYtKhK7sHf2vGTjmEq68YMxayrK_ehuyqs_Wwu-1BSxeaMBXFoYWJRxwsv8IpqqO8"></img>
+  <img width="300px" height="450px" src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"></img>
   <p>Avengers Endgame (2019)
   Robert Downey Jr. </p> <p>Chris Hemsworth, Chris Evans</p>
   <p>Directed by: Anthony Russo, Joe Russo </p>
@@ -32,7 +34,8 @@ Taylor Kitsch </p> <p>Peter Berg, Rihanna</p>
 {/* pagination!!!!! */}
 
 
-</>
+</div>
+  )
 };
 
-export default Listings;
+export default newListings;
