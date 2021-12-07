@@ -1,4 +1,5 @@
 import { Alert, Carousel } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // change colour of text in here it looks bad
 const About = () => {
@@ -64,6 +65,20 @@ const About = () => {
             <a href="https://github.com/Adam-Ateye" target="_blank">
               Adam Ateye
             </a>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
+            alt="A gaggle of laptops"
+          />
+          {/* give these a margin with css, look very grouped */}
+          <Carousel.Caption>
+            <h3>Contact Us</h3>
+            <Nav.Link as={Link} to={"/contactus"}>
+              Contact Us
+            </Nav.Link>
           </Carousel.Caption>
         </Carousel.Item>
       </Carousel>
