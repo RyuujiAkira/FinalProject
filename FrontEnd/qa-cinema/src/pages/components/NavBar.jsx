@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
 import About from "../About";
 import Bookings from "../Bookings";
-import Discussions from "../Discussion";
+import Discussion from "../Discussion";
 import GettingThere from "../GettingThere";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
@@ -33,14 +33,12 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to={"/discussions"}>
+                  <NavDropdown.Item as={Link} to={"/discussion"}>
                     Discussions
                   </NavDropdown.Item>
                   <NavDropdown.Divider />
                 </NavDropdown>
-                <Nav.Link as={Link} to={"/gettingThere"}>
-                  Find Us
-                </Nav.Link>
+
                 <Nav.Link as={Link} to={"/about"}>
                   About
                 </Nav.Link>
@@ -69,12 +67,10 @@ const NavBar = () => {
           <Route path="/booking">
             <Bookings />
           </Route>
-          <Route path="/discussions">
-            <Discussions />
+          <Route path="/discussion">
+            <Discussion />
           </Route>
-          <Route path="/gettingThere">
-            <GettingThere />
-          </Route>
+
           <Route path="/contactus">
             <ContactUs />
           </Route>
