@@ -9,6 +9,8 @@ import Discussion from "../Discussion";
 import AroundUs from "../AroundUs";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
+import Screens from "../Screens";
+import Upcoming from "../Upcoming";
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -34,6 +36,9 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
                   </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/upcoming"}>
+                    Upcoming
+                  </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
                   </NavDropdown.Item>
@@ -45,6 +50,9 @@ const NavBar = () => {
 
                 <Nav.Link as={Link} to={"/about"}>
                   About
+                </Nav.Link>
+                <Nav.Link as={Link} to={"/screens"}>
+                  Screens
                 </Nav.Link>
                 <Nav.Link as={Link} to={"/contactus"}>
                   Contact Us
@@ -71,8 +79,14 @@ const NavBar = () => {
           <Route path="/NewListings">
             <NewListings />
           </Route>
+          <Route path="/upcoming">
+            <Upcoming />
+          </Route>
           <Route path="/about">
             <About />
+          </Route>
+          <Route path="/screens">
+            <Screens />
           </Route>
           <Route path="/booking">
             <Bookings />
