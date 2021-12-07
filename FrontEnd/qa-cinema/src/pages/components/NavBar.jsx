@@ -5,7 +5,7 @@ import Listings from "../Listings";
 import About from "../About";
 import Bookings from "../Bookings";
 import Discussion from "../Discussion";
-import GettingThere from "../GettingThere";
+import AroundUs from "../AroundUs";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 const NavBar = () => {
@@ -48,6 +48,9 @@ const NavBar = () => {
                 <Nav.Link as={Link} to={"/findUs"}>
                   Find Us
                 </Nav.Link>
+                <Nav.Link as={Link} to={"/aroundUs"}>
+                  Around Us
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -76,6 +79,9 @@ const NavBar = () => {
           </Route>
           <Route path="/findUs">
             <FindUs />
+            </Route>
+          <Route path="/aroundUs">
+            <AroundUs />
 
           </Route>
         </Switch>
