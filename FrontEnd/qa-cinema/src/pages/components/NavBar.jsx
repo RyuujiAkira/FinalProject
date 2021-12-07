@@ -85,7 +85,7 @@ const NavBar = () => {
           </Route>
           <Route path="/findUs">
             <FindUs />
-            </Route>
+          </Route>
           <Route path="/aroundUs">
             <AroundUs />
 
