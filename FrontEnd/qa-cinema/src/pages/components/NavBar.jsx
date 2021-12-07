@@ -30,6 +30,9 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
+                  <NavDropdown.Item as={Link} to={"/newlistings"}>
+                    newListings
+                  </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
                   </NavDropdown.Item>
@@ -60,6 +63,9 @@ const NavBar = () => {
           </Route>
           <Route path="/listings">
             <Listings />
+          </Route>
+          <Route path="/newlistings">
+            <newListings />
           </Route>
           <Route path="/about">
             <About />
