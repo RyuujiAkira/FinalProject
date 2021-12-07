@@ -1,7 +1,7 @@
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Listings from "../Listings";
+import Listings from "../newListings";
 import Upcoming from "../Upcoming";
 import About from "../About";
 import Bookings from "../Bookings";
@@ -27,8 +27,8 @@ const NavBar = () => {
                 </Nav.Link>
                 {/* maybe move these around or delete the dropdown? */}
                 <NavDropdown title="Movies" id="basic-nav-dropdown">
-                  <NavDropdown.Item as={Link} to={"/listings"}>
-                    Listings
+                  <NavDropdown.Item as={Link} to={"/newlistings"}>
+                    newListings
                   </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
@@ -57,8 +57,8 @@ const NavBar = () => {
           <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/listings">
-            <Listings />
+          <Route path="/newlistings">
+            <newListings />
           </Route>
           <Route path="/upcoming">
             <Upcoming />
