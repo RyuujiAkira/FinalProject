@@ -4,7 +4,31 @@ import axios from "axios";
 
 const Bookings = () => {
 
+  const MakeBooking = () => {
+    //const [booking, setBooking] = useState(null);
+    //const [error, setError] = useState(null);
 
+    const booking_actual = {
+      "movieTitle": title,
+      "dateTime": date,
+      "userName": userName,
+      "noOfSeats": seats,
+      "adult": adults,
+      "child": child,
+      "concession": concession
+    }
+
+    axios
+      .post("http://localhost:6969/create", booking_actual)
+      .then((response) => {
+        console.log(response.data);
+        //setBooking(response.data);
+      })
+      .catch((err) => {
+        //setError(err);
+      });
+
+  };
 
   const [title, setTitle] = useState("")
   const titleInput = useRef(null);
@@ -87,6 +111,9 @@ const Bookings = () => {
 
   //*********************************************************************** */
 
+
+
+  //********************************************** */
   const clearForms = () => {
     setConcession(0);
     concessionInput.current.value = null;
@@ -109,22 +136,24 @@ const Bookings = () => {
   return (<div>
     <h1>Make your Booking</h1>
     <span>Movie</span>
-    <input type="text" id="Title" onChange={alterTitle} ref={titleInput} />
-    <span>Date</span>
-    <input type="datetime-local" onChange={alterDate} id="date" ref={dateInput} />
-    <span>Username</span>
-    <input type="text" onChange={alterUserName} id="username" ref={userNameInput} />
-    <span>Seats</span>
-    <input type="number" onChange={alterSeats} id="seats" ref={seatInput} />
-    <span>Adult</span>
-    <input type="number" onChange={alterAdults} id="adult" ref={adultInput} />
-    <span>Child</span>
-    <input type="number" onChange={alterChild} id="child" ref={childInput} />
-    <span>Concession</span>
-    <input type="number" id="concession" onChange={alterConcession} ref={concessionInput} />
-
+    <form onSubmit={MakeBooking}>
+      <input type="text" id="Title" onChange={alterTitle} ref={titleInput} />
+      <span>Date</span>
+      <input type="datetime" onChange={alterDate} id="date" ref={dateInput} />
+      <span>Username</span>
+      <input type="text" onChange={alterUserName} id="username" ref={userNameInput} />
+      <span>Seats</span>
+      <input type="number" onChange={alterSeats} id="seats" ref={seatInput} />
+      <span>Adult</span>
+      <input type="number" onChange={alterAdults} id="adult" ref={adultInput} />
+      <span>Child</span>
+      <input type="number" onChange={alterChild} id="child" ref={childInput} />
+      <span>Concession</span>
+      <input type="number" id="concession" onChange={alterConcession} ref={concessionInput} />
+      <button type="submit" id="data">Book Now</button>
+    </form>
     <p>Is your order booked?</p>
-    <button type="button" onClick={clearForms} id="data">Book Now</button>
+
     <script src="BookingForm.js"></script>
 
   </div>);
