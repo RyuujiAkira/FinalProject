@@ -2,7 +2,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
-import NewListings from "../newListings";
+import NewListings from "../NewListings";
 import About from "../About";
 import Bookings from "../Bookings";
 import Discussion from "../Discussion";
@@ -12,13 +12,15 @@ import FindUs from "../FindUs";
 import Screens from "../Screens";
 
 import Classifications from "../Classifications";
+import Upcoming from "../Upcoming";
+import Payment from "../Payment";
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
   return (
     <Router>
       <div>
-        <Navbar bg="light" expand="lg"  >
+        <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
               Qa Cinema
@@ -34,10 +36,16 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
+
                   <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
                   </NavDropdown.Item>
                   
+
+
+                  <NavDropdown.Item as={Link} to={"/upcoming"}>
+                    Upcoming
+                  </NavDropdown.Item>
                   <NavDropdown.Item as={Link} to={"/booking"}>
                     Bookings
                   </NavDropdown.Item>
@@ -78,10 +86,17 @@ const NavBar = () => {
           <Route path="/listings">
             <Listings />
           </Route>
+
           <Route path="/NewListings">
             <NewListings />
           </Route>
           
+
+
+          <Route path="/upcoming">
+            <NewListings />
+          </Route>
+
           <Route path="/about">
             <About />
           </Route>
@@ -94,16 +109,21 @@ const NavBar = () => {
           <Route path="/discussion">
             <Discussion />
           </Route>
+          <Route path="/payment">
+            <Payment />
+          </Route>
 
           <Route path="/contactus">
             <ContactUs />
           </Route>
           <Route path="/findUs">
             <FindUs />
-            </Route>
+          </Route>
           <Route path="/aroundUs">
             <AroundUs />
+
             
+
 
           </Route>
           <Route path="/classifications">
