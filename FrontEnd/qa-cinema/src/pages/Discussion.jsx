@@ -2,10 +2,11 @@ const Discussion = () => {
     return (
         <div className="Discussion">
             <div className="container">
-                <h1>Discussion</h1>
                 <div className="row">
-                <div className="row">
-                    <p className="text-center">Most recent reviews</p>
+                    <div className="row">
+                        <div className="header">
+                            <p className="recent">Most recent reviews</p>
+                        </div>
                     <div className="col-md-4 text-center">
                     <div className="profile">
                         <img src="user.png" className="user" />
@@ -88,3 +89,5 @@ const Discussion = () => {
         </div>
     )
 }
+
+export default Discussion;
