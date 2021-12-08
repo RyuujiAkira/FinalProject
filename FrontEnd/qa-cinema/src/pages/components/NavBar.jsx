@@ -11,6 +11,7 @@ import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 import Screens from "../Screens";
 import Upcoming from "../Upcoming";
+import Payment from "../Payment";
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -94,13 +95,16 @@ const NavBar = () => {
           <Route path="/discussion">
             <Discussion />
           </Route>
+          <Route path="/payment">
+            <Payment />
+          </Route>
 
           <Route path="/contactus">
             <ContactUs />
           </Route>
           <Route path="/findUs">
             <FindUs />
-            </Route>
+          </Route>
           <Route path="/aroundUs">
             <AroundUs />
 
