@@ -3,38 +3,38 @@ const Discussion = () => {
         <div className="Discussion">
             <div className="container">
                 <div className="row">
+                    <div className="recent col-12 col-md-8">
+                        <p className="text">Most recent reviews</p>
+                    </div>
                     <div className="row">
-                        <div className="header">
-                            <p className="recent">Most recent reviews</p>
+                        <div className="col-6 col-md-4 text-center">
+                            <div className="profile">
+                                <img src="user.png" className="user" />
+                                <blockquote>Review1</blockquote>
+                                <h3>
+                                    Movie1 <span> username</span>
+                                </h3>
+                            </div>
                         </div>
-                    <div className="col-md-4 text-center">
-                    <div className="profile">
-                        <img src="user.png" className="user" />
-                        <blockquote>Review1</blockquote>
-                        <h3>
-                        Movie1 <span> username</span>
-                        </h3>
+                        <div className="col-6 col-md-4 text-center">
+                            <div className="profile">
+                                <img src="user.png" className="user" />
+                                <blockquote>Review2</blockquote>
+                                <h3>
+                                    Movie2 <span> username</span>
+                                </h3>
+                            </div>
+                        </div>
+                        <div className="col-6 col-md-4 text-center">
+                            <div className="profile">
+                                <img src="user.png" className="user" />
+                                <blockquote>Review3</blockquote>
+                                <h3>
+                                    Movie3 <span> username</span>
+                                </h3>
+                            </div>
+                        </div>
                     </div>
-                    </div>
-                    <div className="col-md-4 text-center">
-                    <div className="profile">
-                        <img src="user.png" className="user" />
-                        <blockquote>Review2</blockquote>
-                        <h3>
-                        Movie2 <span> username</span>
-                        </h3>
-                    </div>
-                    </div>
-                    <div className="col-md-4 text-center">
-                    <div className="profile">
-                        <img src="user.png" className="user" />
-                        <blockquote>Review3</blockquote>
-                        <h3>
-                        Movie3 <span> username</span>
-                        </h3>
-                    </div>
-                    </div>
-                </div>
                 </div>
             </div>
             <div className="forum">

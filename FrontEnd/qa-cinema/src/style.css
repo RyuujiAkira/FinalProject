@@ -38,12 +38,15 @@
     margin: 50px auto;
 }
 
-.test .row {
+.row {
     margin-top: 30px;
+    align-items: center;
+    align-content: center;
 }
 
-.col-md-4 {
+.col-6 {
     margin: 40px auto;
+    align-items: center;
 }
 
 .profile {
@@ -89,12 +92,12 @@ blockquote {
     color: black;
 }
 
-h1, h5, ol {
-    margin: 0;
+ol {
+    margin: 10px;
 }
 
 p {
-    margin: 5px 0;
+    margin: 1px 0;
 }
 
 .forum {
@@ -133,7 +136,8 @@ p {
     left: calc(50% - 60px);
     border: 10px solid white;
 }
-.header {
-    vertical-align: text-top;
+
+.recent {
     text-align: center;
+    border: 3px solid #00C9B7;
 }
