@@ -33,6 +33,11 @@ const Payment = () => {
                                             <Form.Control placeholder="123" />
                                         </Form.Group>
 
+                                        <Form.Group className="mb-3 mx-3" controlId="formGridPhone">
+                                            <Form.Label>Expiry Date</Form.Label>
+                                            <Form.Control placeholder="XX/XX" />
+                                        </Form.Group>
+
                                         <Form.Group className="mb-3 mx-3" controlId="formGridEmail">
                                             <Form.Label>Email</Form.Label>
                                             <Form.Control type="email" placeholder="Enter email" />
