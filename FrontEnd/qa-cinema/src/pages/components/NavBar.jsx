@@ -2,7 +2,7 @@ import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
-import NewListings from "../newListings";
+import NewListings from "../NewListings";
 import About from "../About";
 import Bookings from "../Bookings";
 import Discussion from "../Discussion";
@@ -17,7 +17,7 @@ const NavBar = () => {
   return (
     <Router>
       <div>
-        <Navbar bg="light" expand="lg"  >
+        <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
               Qa Cinema
@@ -33,9 +33,7 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
-                  <NavDropdown.Item as={Link} to={"/NewListings"}>
-                    NewListings
-                  </NavDropdown.Item>
+
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
                   </NavDropdown.Item>
@@ -76,11 +74,9 @@ const NavBar = () => {
           <Route path="/listings">
             <Listings />
           </Route>
-          <Route path="/NewListings">
-            <NewListings />
-          </Route>
+
           <Route path="/upcoming">
-            <Upcoming />
+            <NewListings />
           </Route>
           <Route path="/about">
             <About />
@@ -100,10 +96,9 @@ const NavBar = () => {
           </Route>
           <Route path="/findUs">
             <FindUs />
-            </Route>
+          </Route>
           <Route path="/aroundUs">
             <AroundUs />
-
           </Route>
         </Switch>
       </div>
