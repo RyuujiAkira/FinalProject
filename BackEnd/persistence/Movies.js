@@ -7,10 +7,6 @@ const MoviesSchema = new Schema({
     type: String,
     required: true,
   },
-  description: {
-    type: String,
-    required: true,
-  },
   img: {
     type: String,
     required: true,
@@ -21,6 +17,10 @@ const MoviesSchema = new Schema({
   },
   director: {
     type: String,
+    required: true,
+  },
+  releaseDate: {
+    type: Date,
     required: true,
   },
 });
