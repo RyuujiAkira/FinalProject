@@ -1,8 +1,22 @@
 import { Form, Button } from "react-bootstrap";
 import { ImLocation2 } from "react-icons/im";
 import { AiOutlineMail } from "react-icons/ai";
+import { useState } from "react";
 
 const ContactUs = () => {
+
+    const [validated, setValidated] = useState(false);
+
+    const validationSubmit = (event) => {
+        const form = event.currentTarget;
+        if (form.checkValidity() === false) {
+            event.preventDefault();
+            event.stopPropagation();
+        }
+
+        setValidated(true);
+    };
+
     return (
         <div class="container-fluid px-5 my-5" id="contactUsBody">
             <div class="row justify-content-center">
@@ -28,30 +42,38 @@ const ContactUs = () => {
                                         <p class="mb-4 text-muted">Get in touch by sending us a message here about anything!</p>
                                     </div>
 
-                                    <Form>
+                                    <Form noValidate validated={validated} onSubmit={validationSubmit}>
                                         <Form.Group className="mb-3 mx-5" controlId="formGridName">
                                             <Form.Label>Full Name</Form.Label>
-                                            <Form.Control type="name" placeholder="Enter name" />
+                                            <Form.Control type="text" placeholder="Enter name" name="name" id="name" />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3 mx-5" controlId="formGridPhone">
                                             <Form.Label>Phone Number</Form.Label>
-                                            <Form.Control placeholder="Enter phone number" />
+                                            <Form.Control type="tel" placeholder="Enter phone number" name="phone" id="phone" />
                                         </Form.Group>
 
                                         <Form.Group className="mb-3 mx-5" controlId="formGridEmail">
                                             <Form.Label>Email</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter email" />
+                                            <Form.Control type="email" placeholder="Enter email" required name="email" id="email" />
+                                            <Form.Control.Feedback type="invalid">
+                                                Please provide a valid email.
+                                            </Form.Control.Feedback>
                                         </Form.Group>
 
                                         <Form.Group className="mb-3 mx-5" controlId="formGridSubject">
                                             <Form.Label>Subject</Form.Label>
-                                            <Form.Control type="email" placeholder="Enter subject" />
+                                            <Form.Control type="text" placeholder="Enter subject" required name="subject" id="subject" />
+                                            <Form.Control.Feedback type="invalid">
+                                                Please provide a subject.
+                                            </Form.Control.Feedback>
                                         </Form.Group>
+
                                         <Form.Group className="mb-3 mx-5" controlId="formGridMessage">
                                             <Form.Label>Enter your message</Form.Label>
-                                            <Form.Control as="textarea" rows={7} placeholder="Enter a message here" />
+                                            <Form.Control as="textarea" type="text" rows={7} placeholder="Enter a message here" name="message" id="message" />
                                         </Form.Group>
+
                                         <Button variant="primary" type="submit" className="mx-5">
                                             Submit
                                         </Button>
@@ -65,6 +87,6 @@ const ContactUs = () => {
             </div>
         </div>
     )
-}
+};
 
 export default ContactUs;
