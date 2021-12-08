@@ -1,6 +1,6 @@
 import { Carousel } from "react-bootstrap";
 import { Card } from "react-bootstrap";
-import "../style.css";
+
 const Home = () => {
     return (
         <div id="Homebody" >
