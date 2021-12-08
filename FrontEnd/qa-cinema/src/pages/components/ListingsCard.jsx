@@ -1,6 +1,8 @@
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/Button";
 import { Col } from "react-bootstrap";
+import { BrowserRouter,Link } from "react-router-dom";
+
 const ListingsCard = (props) => {
   return (
     <div>
@@ -10,29 +12,13 @@ const ListingsCard = (props) => {
           <Card.Body>
             <Card.Title>{props.movie.title}</Card.Title>
             <Card.Text>{props.movie.description}</Card.Text>
-            <Button variant="primary" id="listingTimeBTN">
-              16:30
+            <Button variant="primary" id="listingTimeBTN" as ={Link} to = {"/booking"}  >
+              Book Now 
             </Button>
             <br></br>
             <br></br>
-            <Button variant="primary" id="listingTimeBTN">
-              17:45
-            </Button>
-            <br></br>
-            <br></br>
-            <Button variant="primary" id="listingTimeBTN">
-              18:00
-            </Button>
-            <br></br>
-            <br></br>
-            <Button variant="primary" id="listingTimeBTN">
-              19:00
-            </Button>
-            <br></br>
-            <br></br>
-            <Button variant="primary" id="listingTimeBTN">
-              21:30
-            </Button>
+          
+  
           </Card.Body>
         </Card>
         <br></br>
