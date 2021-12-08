@@ -1,5 +1,7 @@
 import { useEffect, useState, useRef } from "react";
 import axios from "axios";
+import { Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 
 const Bookings = () => {
@@ -154,7 +156,15 @@ const Bookings = () => {
     </form>
     <p>Is your order booked?</p>
 
+
+    <Button variant="primary" id="listingTimeBTN" as={Link} to={"/payment"}  >
+      Pay Now
+    </Button>
+
+
+
     <script src="BookingForm.js"></script>
+
 
   </div>);
 };
