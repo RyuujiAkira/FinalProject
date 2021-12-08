@@ -1,41 +1,46 @@
-const newListings = () => {
-
+import axios from "axios";
+import { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
+import { Col, Row } from "react-bootstrap";
+import UpcomingCard from "./components/UpcomingCard";
+const NewListings = () => {
   //   Have api calls in here?
+
+  const [error, setError] = useState(null);
+
+  const [array, setArray] = useState([]);
+  useEffect(() => {
+    axios
+      .get("http://localhost:6969/watchAll")
+      .then((response) => {
+        setArray(response.data);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }, []);
+
+  const filtered = array.filter((movie) => {
+    const releaseDate = new Date(movie.releaseDate);
+    console.log(releaseDate);
+    return releaseDate >= Date.now();
+  });
+
+  console.log(array);
+
+  console.log(filtered);
   return (
-  <div>
-  <h5>Below is the listings gallery. All the current movies out now!</h5>
-  <div class="row">
-<div class="px-4">
-  <img width="300px" height="450px" src="https://c4.wallpaperflare.com/wallpaper/764/590/391/inception-leonardo-dicaprio-movie-posters-2400x3500-entertainment-movies-hd-art-wallpaper-preview.jpg" ></img>
- <p>Inception (2010)
-  Leonardo DiCaprio </p> <p>Joseph Gordon-Levitt, Ellen Page</p>
-  <p>Directed by: Christopher Nolan </p>
-  </div>
-  <div class="px-3">
-  <img width="300px" height="450px" src="https://m.media-amazon.com/images/M/MV5BMTc5MDE2ODcwNV5BMl5BanBnXkFtZTgwMzI2NzQ2NzM@._V1_.jpg"></img>
-  <p>Avengers Endgame (2019)
-  Robert Downey Jr. </p> <p>Chris Hemsworth, Chris Evans</p>
-  <p>Directed by: Anthony Russo, Joe Russo </p>
-  </div>
-  <div class="px-3">
-  <img width="300px" height="450px" src="https://w0.peakpx.com/wallpaper/467/882/HD-wallpaper-black-widow-movie-poster-marvel-cinematic-universe-portrait-display-movies-women-scarlett-johansson.jpg"></img>
-  <p>Black Widow (2021)
-  Scarlett Johansson </p> <p>Florence Pugh, David Harbour</p>
-  <p>Directed by: Cate Shortland </p>
-  </div>
-  <div class="px-3">
-  <img width="300px" height="450px" src="https://gdj-inr5u0ip5pewom.stackpathdns.com/wp-content/uploads/2012/05/movie-poster-20.jpg"></img>
-  <p>Battleship (2012)
-Taylor Kitsch </p> <p>Peter Berg, Rihanna</p>
-  <p>Directed by: Peter Berg </p>
-</div>
-</div>
-
-{/* pagination!!!!! */}
-
-
-</div>
-  )
+    <div>
+      <h1 class="text-center">UPCOMING</h1>
+      <Container>
+        <Row>
+          {filtered.map((movie) => (
+            <UpcomingCard movie={movie} />
+          ))}
+        </Row>
+      </Container>
+    </div>
+  );
 };
 
-export default newListings;
+export default NewListings;
