@@ -1,88 +1,145 @@
-import { Alert, Carousel } from "react-bootstrap";
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Card, Row, Col } from "react-bootstrap";
+import { BsGithub } from "react-icons/bs"
+import { MdEmail } from "react-icons/md"
 import { Link } from "react-router-dom";
-// change colour of text in here it looks bad
+import "../resources/css/aboutus.css";
+
 const About = () => {
   return (
     <div>
-      <Alert key="idklol" variant="dark">
-        If you would like to contact us please use our{" "}
-        <Alert.Link as={Link} to={"/contactus"}>
-          Contact Us Page
-        </Alert.Link>
-      </Alert>
-      <Carousel>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://images.unsplash.com/photo-1562523699-455ffb7f37b4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>Welcome to QA Cinema</h3>
-            <p>
-              Worlds first Area 51 based cinema, For Humans and non Humans alike
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="Cinema sign in the wild"
-          />
+      <div class="container-fluid" id="bodyGradient">
+        <div class="px-4 py-5 text-center text-white">
+          <img class="d-block mx-auto mb-4" src="https://dummyimage.com/350x200/ffffff/00c9b8.png&text=QA+CINEMA" alt="QA Cinema Logo" />
+          <h1 class="display-5 fw-bold">About Us</h1>
+          <div class="col-lg-6 mx-auto">
+            <h3 class="display-5 fw-bold text-center">TEAM VALOR</h3>
+            <p class="lead mb-4">Find out about the members behind QA Cinema</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <Link to="/contactus">
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contact QA Cinema</button>
+              </Link>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="aboutUsBody">
+        <div class="container">
+          <Row className="pt-5">
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/90899013?v=4" alt="Fraser Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center">Fraser Smith</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/Fraser-A-N-Smith" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/90904963?v=4" alt="Kieran Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center text-de">Kieran Goodinson</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/Kieran0507" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/37118596?v=4" alt="Jonathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center">Jonathan Rabaja</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/RyuujiAkira/" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+          </Row>
 
-          <Carousel.Caption>
-            <h3>Team Valor</h3>
-            {/* add other text here at some point */}
-            <p>
-              Team valor consists of Fraser Smith, Kieran Goodinson, Sarah Khan,
-              Jonathan Rabaja, Junathan Abraham-Odukale, We are Something{" "}
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="A gaggle of laptops"
-          />
-          {/* give these a margin with css, look very grouped */}
-          <Carousel.Caption>
-            <h3>Our GitHub Links</h3>
-            <a href="https://github.com/Kieran0507" target="_blank">
-              Kieran Goodinson,
-            </a>
-            <a href="https://github.com/Fraser-A-N-Smith" target="_blank">
-              Fraser Smith,
-            </a>
-            <a href="https://github.com/RyuujiAkira" target="_blank">
-              Jonathan Rabaja,
-            </a>
-            <a href="https://github.com/junathana23" target="_blank">
-              Junathan Abraham-Odukale,
-            </a>
-            <a href="https://github.com/Adam-Ateye" target="_blank">
-              Adam Ateye
-            </a>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"
-            alt="A gaggle of laptops"
-          />
-          {/* give these a margin with css, look very grouped */}
-          <Carousel.Caption>
-            <h3>Contact Us</h3>
-            <Nav.Link as={Link} to={"/contactus"}>
-              Contact Us
-            </Nav.Link>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
-    </div>
+          <Row className="my-5 pb-5">
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898581?v=4" alt="=Junathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center">Junathan Abraham-Odukale</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/junathana23" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898623?v=4" alt="Adam Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center">Adam Ateye</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/Adam-Ateye" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+            <Col className="mx-1">
+              <Card className="text-white glassCard">
+                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898546?v=4" alt="Jonathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Body>
+                  <Card.Title className="text-center">Sarah Khan</Card.Title>
+                  <Card.Text>
+                    <h6 class="text-center">Role</h6>
+                    Short description about yourself
+                  </Card.Text>
+                </Card.Body>
+                <Card.Footer className="text-center">
+                  <a href="https://github.com/sarahkgh" target="_blank" rel="noreferrer">
+                    <BsGithub size={28} className="mx-2" />
+                  </a>
+                  <MdEmail size={28} className="mx-2" />
+                </Card.Footer>
+              </Card>
+            </Col>
+          </Row>
+        </div>
+      </div>
+    </div >
   );
 };
 
