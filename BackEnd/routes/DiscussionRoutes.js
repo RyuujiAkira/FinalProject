@@ -16,7 +16,7 @@ router.post("/create", (req, res, next) => {
       next(error);
     });
 });
-router.get("/getName/:name", (req, res) => {
+router.get("/getName/:userName", (req, res) => {
   const name = req.params.name;
 
   Discussion.find({ userName: name }, (error, result) => {
@@ -29,10 +29,20 @@ router.get("/getName/:name", (req, res) => {
 router.delete("/deleteId/:id", (req, res) => {
   const id = req.params.id;
   console.log(id);
-  Lizard.findByIdAndDelete(id, (error) => {
+  Discussion.findByIdAndDelete(id, (error) => {
     if (error) {
       console.log(`error :( : ${error}`);
     }
     res.status(202).send("Deleted!");
+  });
+});
+router.get("/getComment/:comment", (req, res) => {
+  const comment = req.params.comment;
+
+  Discussion.find({ comment: comment }, (error, result) => {
+    if (error) {
+      console.log(`error :( : ${error}`);
+    }
+    res.status(200).send(result);
   });
 });
