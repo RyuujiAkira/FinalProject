@@ -8,22 +8,21 @@ export default function ContactUs() {
 
     const [validated, setValidated] = useState(false);
 
-    const validationSubmit = (event) => {
-        const form = event.currentTarget;
-        if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
-        }
-
-        setValidated(true);
-    };
     function sendEmail(e) {
+        const form = e.currentTarget;
         e.preventDefault();
+        if (form.checkValidity() === false) {
+            e.preventDefault();
+            e.stopPropagation();
+        }
+        else {
+            window.alert("Email has been sent!");
+        }
+        setValidated(true);
 
         emailjs.sendForm('service_bsmkosj', 'template_outs34d', e.target, 'user_Dpn0HMLp7C1GAsq1WDyXO')
             .then((result) => {
                 console.log(result.text);
-                window.alert("Email has been sent!");
             }, (error) => {
                 console.log(error.text);
             });
@@ -54,7 +53,7 @@ export default function ContactUs() {
                                         <p class="mb-4 text-muted">Get in touch by sending us a message here about anything!</p>
                                     </div>
 
-                                    <Form noValidate validated={validated} onSubmit={validationSubmit, sendEmail}>
+                                    <Form noValidate validated={validated} onSubmit={sendEmail}>
                                         <Form.Group className="mb-3 mx-5" controlId="formGridName">
                                             <Form.Label>Full Name</Form.Label>
                                             <Form.Control type="text" placeholder="Enter name" name="name" id="name" />
