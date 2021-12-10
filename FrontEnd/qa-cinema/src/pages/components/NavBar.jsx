@@ -11,10 +11,19 @@ import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 import Screens from "../Screens";
 import Classifications from "../Classifications";
-import newListings from "../newListings";
+
+
 import Upcoming from "../Upcoming";
 import Payment from "../Payment";
+
+import Classifications from "../Classifications";
+
+
+import newListings from "../newListings";
+
+
 import OpeningTimes from "../OpeningTimes";
+
 
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
@@ -38,10 +47,15 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
+
+
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
+
+
                   <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
+
                   </NavDropdown.Item>
                   {/* <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
@@ -94,8 +108,13 @@ const NavBar = () => {
           </Route>
           <Route path="/upcoming">
             <newListings/>
+            
+
+
           <Route path="/NewListings">
             <NewListings />
+
+
           </Route>
           {/* <Route path="/NewListings">
             <NewListings />
@@ -118,6 +137,11 @@ const NavBar = () => {
           <Route path="/payment">
             <Payment />
           </Route>
+
+          <Route path="/classifications">
+            <Classifications />
+          </Route>
+
           <Route path="/contactus">
             <ContactUs />
           </Route>
