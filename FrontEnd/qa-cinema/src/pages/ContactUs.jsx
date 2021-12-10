@@ -1,9 +1,10 @@
 import { Form, Button } from "react-bootstrap";
 import { ImLocation2 } from "react-icons/im";
 import { AiOutlineMail } from "react-icons/ai";
-import { useState } from "react";
+import { useState, React } from "react";
+import emailjs from 'emailjs-com';
 
-const ContactUs = () => {
+export default function ContactUs() {
 
     const [validated, setValidated] = useState(false);
 
@@ -16,6 +17,17 @@ const ContactUs = () => {
 
         setValidated(true);
     };
+    function sendEmail(e) {
+        e.preventDefault();
+
+        emailjs.sendForm('service_bsmkosj', 'template_outs34d', e.target, 'user_Dpn0HMLp7C1GAsq1WDyXO')
+            .then((result) => {
+                console.log(result.text);
+                window.alert("Email has been sent!");
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
     return (
         <div class="container-fluid px-5 my-5" id="contactUsBody">
@@ -42,7 +54,7 @@ const ContactUs = () => {
                                         <p class="mb-4 text-muted">Get in touch by sending us a message here about anything!</p>
                                     </div>
 
-                                    <Form noValidate validated={validated} onSubmit={validationSubmit}>
+                                    <Form noValidate validated={validated} onSubmit={validationSubmit, sendEmail}>
                                         <Form.Group className="mb-3 mx-5" controlId="formGridName">
                                             <Form.Label>Full Name</Form.Label>
                                             <Form.Control type="text" placeholder="Enter name" name="name" id="name" />
@@ -88,5 +100,3 @@ const ContactUs = () => {
         </div>
     )
 };
-
-export default ContactUs;
