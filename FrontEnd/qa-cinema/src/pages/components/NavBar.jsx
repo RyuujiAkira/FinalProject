@@ -12,15 +12,7 @@ import FindUs from "../FindUs";
 import Screens from "../Screens";
 import Classifications from "../Classifications";
 
-
-import Upcoming from "../Upcoming";
 import Payment from "../Payment";
-
-import Classifications from "../Classifications";
-
-
-import newListings from "../newListings";
-
 
 import OpeningTimes from "../OpeningTimes";
 
@@ -51,7 +43,7 @@ const NavBar = () => {
 
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
-
+                  </NavDropdown.Item>
 
                   <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
@@ -90,6 +82,7 @@ const NavBar = () => {
                 </Nav.Link>
                 <Nav.Link as={Link} to={"/openingTimes"}>
                   Opening Times
+                </Nav.Link>
                 <Nav.Link as={Link} to={"/classifications"}>
                   Classifications
                 </Nav.Link>
@@ -107,8 +100,9 @@ const NavBar = () => {
             <Listings />
           </Route>
           <Route path="/upcoming">
-            <newListings/>
-            
+            <newListings />
+          </Route>
+
 
 
           <Route path="/NewListings">
@@ -156,7 +150,7 @@ const NavBar = () => {
           </Route>
           <Route path="/classifications">
             <Classifications />
-            </Route>
+          </Route>
         </Switch>
       </div>
     </Router>
