@@ -10,8 +10,14 @@ import AroundUs from "../AroundUs";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 import Screens from "../Screens";
+
+import Classifications from "../Classifications";
+<<<<<<< HEAD
+import newListings from "../newListings";
+=======
 import Upcoming from "../Upcoming";
 import Payment from "../Payment";
+>>>>>>> 5d1fd33a85f4533bcdeb983c92e3be7dbe099e00
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -34,6 +40,20 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
+<<<<<<< HEAD
+                  <NavDropdown.Item as={Link} to={"/upcoming"}>
+                    Upcoming
+=======
+
+                  <NavDropdown.Item as={Link} to={"/NewListings"}>
+                    NewListings
+>>>>>>> 5d1fd33a85f4533bcdeb983c92e3be7dbe099e00
+                  </NavDropdown.Item>
+                  {/* <NavDropdown.Item as={Link} to={"/NewListings"}>
+                    NewListings
+                  </NavDropdown.Item> */}
+                  
+
 
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
@@ -62,6 +82,9 @@ const NavBar = () => {
                 <Nav.Link as={Link} to={"/aroundUs"}>
                   Around Us
                 </Nav.Link>
+                <Nav.Link as={Link} to={"/classifications"}>
+                  Classifications
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -75,10 +98,28 @@ const NavBar = () => {
           <Route path="/listings">
             <Listings />
           </Route>
+<<<<<<< HEAD
+          <Route path="/upcoming">
+            <newListings/>
+            
+=======
+
+          <Route path="/NewListings">
+            <NewListings />
+>>>>>>> 5d1fd33a85f4533bcdeb983c92e3be7dbe099e00
+          </Route>
+
+
+          {/* <Route path="/NewListings">
+            <NewListings />
+          </Route> */}
+          
+
 
           <Route path="/upcoming">
             <NewListings />
           </Route>
+
           <Route path="/about">
             <About />
           </Route>
@@ -103,7 +144,14 @@ const NavBar = () => {
           </Route>
           <Route path="/aroundUs">
             <AroundUs />
+
+            
+
+
           </Route>
+          <Route path="/classifications">
+            <Classifications />
+            </Route>
         </Switch>
       </div>
     </Router>
