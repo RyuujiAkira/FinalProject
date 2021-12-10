@@ -23,11 +23,11 @@ const MongoBookingsSchema = new Schema({
         required: true
     },
     adult: {
-        type: Boolean,
+        type: Number,
         required: true
     },
     child: {
-        type: Boolean,
+        type: Number,
         required: true
     },
     concession: {

@@ -1,307 +1,73 @@
-import Card from 'react-bootstrap/Card'
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import { Col, Row } from 'react-bootstrap';
+import Container from "react-bootstrap/Container";
+import { Col, Row } from "react-bootstrap";
+import axios from "axios";
+import { useState, useEffect } from "react";
+import ListingsCard from "./components/ListingsCard";
+import SearchBar from "./components/SearchBar";
 const Listings = () => {
-  //   Have api calls in here?
-  return (
+  //   makes api calls and maps them out to the card component
+  const [movies, setMovies] = useState([]);
+  const [error, setError] = useState(null);
+  const [query, setQuery] = useState("");
+  const [filtered, setFiltered] = useState([]);
 
-    <div id="listingsBody">
+  useEffect(() => {
+    axios
+      .get("http://localhost:6969/watchAll")
+      .then((response) => {
+        setMovies(response.data);
+        setFiltered(response.data);
+      })
+      .catch((error) => {
+        setError(error);
+      });
+  }, []);
 
-
-
-
-
-
-
-
-
-
-
-
-      <Container>
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 1</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 2</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col><Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-            <Card.Body>
-              <Card.Title>Movie 3</Card.Title>
-              <Card.Text>
-                Movie synopsis
-              </Card.Text>
-              <Button variant="primary" id="listingTimeBTN">16:30</Button>
-              <br></br>
-              <br></br>
-              <Button variant="primary" id="listingTimeBTN">17:45</Button>
-              <br></br>
-              <br></br>
-              <Button variant="primary" id="listingTimeBTN">18:00</Button>
-              <br></br>
-              <br></br>
-              <Button variant="primary" id="listingTimeBTN">19:00</Button>
-              <br></br>
-              <br></br>
-              <Button variant="primary" id="listingTimeBTN">21:30</Button>
-            </Card.Body>
-          </Card>
-            <br></br>
-            <br></br>
-          </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 4</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 4</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 5</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 6</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-          </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 7</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 8</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-          <Col>
-            <Card style={{ width: '18rem' }}>
-              <Card.Img variant="top" src="https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-              <Card.Body>
-                <Card.Title>Movie 9</Card.Title>
-                <Card.Text>
-                  Movie synopsis
-                </Card.Text>
-                <Button variant="primary" id="listingTimeBTN">16:30</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">17:45</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">18:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">19:00</Button>
-                <br></br>
-                <br></br>
-                <Button variant="primary" id="listingTimeBTN">21:30</Button>
-              </Card.Body>
-            </Card>
-            <br></br>
-            <br></br>
-          </Col>
-        </Row>
-
-        <Row>
-          <Col>
-          </Col>
-          <Col>
-          </Col>
-        </Row>
-      </Container>
-    </div>
-  );
+  const updateQuery = (query) => {
+    const filtered = movies.filter((movie) => {
+      return movie.title.toLowerCase().includes(query.toLowerCase());
+    });
+    setQuery(query);
+    setFiltered(filtered);
+  };
+  console.log(query);
+  console.log(filtered);
+  if (error) {
+    return (
+      <h1>
+        Something isn't working, Error message is {error.message}, Please try to
+        reload the page
+      </h1>
+    );
+  } else if (filtered !== movies) {
+    let banana = (
+      <div id="listingsBody">
+        <SearchBar query={query} setQuery={updateQuery} />
+        <Container>
+          <Row>
+            {filtered.map((movie) => (
+              <ListingsCard movie={movie} />
+            ))}
+          </Row>
+        </Container>
+      </div>
+    );
+    return banana;
+  } else {
+    let banana = (
+      <div id="listingsBody">
+        <SearchBar query={query} setQuery={updateQuery} />
+        <Container>
+          <Row>
+            {movies.map((movie) => (
+              <ListingsCard movie={movie} />
+            ))}
+          </Row>
+        </Container>
+      </div>
+    );
+    return banana;
+  }
 };
 
 export default Listings;
