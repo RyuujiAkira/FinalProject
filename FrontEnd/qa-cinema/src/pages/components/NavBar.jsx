@@ -10,13 +10,19 @@ import AroundUs from "../AroundUs";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 import Screens from "../Screens";
-
 import Classifications from "../Classifications";
+
 
 import Upcoming from "../Upcoming";
 import Payment from "../Payment";
 
 import Classifications from "../Classifications";
+
+
+import newListings from "../newListings";
+
+
+import OpeningTimes from "../OpeningTimes";
 
 
 const NavBar = () => {
@@ -42,6 +48,7 @@ const NavBar = () => {
                     Listings
                   </NavDropdown.Item>
 
+
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
 
@@ -53,8 +60,6 @@ const NavBar = () => {
                   {/* <NavDropdown.Item as={Link} to={"/NewListings"}>
                     NewListings
                   </NavDropdown.Item> */}
-                  
-
 
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
@@ -83,6 +88,8 @@ const NavBar = () => {
                 <Nav.Link as={Link} to={"/aroundUs"}>
                   Around Us
                 </Nav.Link>
+                <Nav.Link as={Link} to={"/openingTimes"}>
+                  Opening Times
                 <Nav.Link as={Link} to={"/classifications"}>
                   Classifications
                 </Nav.Link>
@@ -99,7 +106,6 @@ const NavBar = () => {
           <Route path="/listings">
             <Listings />
           </Route>
-
           <Route path="/upcoming">
             <newListings/>
             
@@ -108,19 +114,14 @@ const NavBar = () => {
           <Route path="/NewListings">
             <NewListings />
 
+
           </Route>
-
-
           {/* <Route path="/NewListings">
             <NewListings />
           </Route> */}
-          
-
-
           <Route path="/upcoming">
             <NewListings />
           </Route>
-
           <Route path="/about">
             <About />
           </Route>
@@ -136,9 +137,11 @@ const NavBar = () => {
           <Route path="/payment">
             <Payment />
           </Route>
+
           <Route path="/classifications">
             <Classifications />
           </Route>
+
           <Route path="/contactus">
             <ContactUs />
           </Route>
@@ -147,10 +150,9 @@ const NavBar = () => {
           </Route>
           <Route path="/aroundUs">
             <AroundUs />
-
-            
-
-
+          </Route>
+          <Route path="/openingTimes">
+            <OpeningTimes />
           </Route>
           <Route path="/classifications">
             <Classifications />
