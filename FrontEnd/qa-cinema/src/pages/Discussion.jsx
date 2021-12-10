@@ -28,6 +28,27 @@ const Discussion = () => {
 
     }
 
+    const moderate = (text) => {
+        const badNouns = ["bad code", "fuck", "shit", "crap", "idiot"];
+        const replacementWords = ["buttercup", "daisy", "darling", "excellent programmer", "lovely person"];
+
+        let stopMod = false;
+        let badWordCount = 0;
+
+        for (let i = 0; i < badNouns.size; i++) {
+
+            if ((text.indexOf !== -1) == true) {
+
+                stopMod = true;
+                badWordCount += 1;
+                text.replace(badNouns[i], replacementWords[i]);
+            }
+        }
+        const modResponse = `There were ${badWordCount} improper words in your review`;
+        if (badWordCount > 0) {
+            document.body.appendChild(<h1>{modResponse}</h1>)
+        }
+    }
     return (
         <div className="Discussion">
             <div className="container" id="container">
