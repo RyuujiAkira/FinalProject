@@ -43,7 +43,7 @@ export default function ContactUs() {
                                                 <h4><ImLocation2 /> Address </h4>
                                                 <p>8, St James's Bldg, 61-95 Oxford St, Manchester M1 6FQ</p>
                                                 <h4 class="pt-3"><AiOutlineMail /> Email</h4>
-                                                <p>fraser.smith@gmail.com</p>
+                                                <p>cinemaqa@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>
