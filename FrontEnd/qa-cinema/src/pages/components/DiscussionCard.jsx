@@ -27,6 +27,7 @@ const DiscussionCard = ({ movie, discussion }) => {
         datePosted: Date.now(),
         userName: userName,
         comment: comment,
+        rating: currentValue,
       };
 
       axios
