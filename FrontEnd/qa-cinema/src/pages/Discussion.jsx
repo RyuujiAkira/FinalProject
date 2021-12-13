@@ -37,7 +37,6 @@ const Discussion = () => {
       .get("http://localhost:6969/watchAll")
       .then((response) => {
         setMovieList(response.data);
-        console.log(movieList);
       })
       .catch((error) => {
         setError(error);
@@ -55,7 +54,7 @@ const Discussion = () => {
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentMovies = movieList.slice(indexOfFirstCard, indexOfLastCard);
-
+  console.log(movieList);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
     <div className="Discussion">
@@ -64,7 +63,7 @@ const Discussion = () => {
         <div className="row">
           <Row>
             {currentMovies.map((movie) => (
-              <DiscussionCard movie={movie} />
+              <DiscussionCard movie={movie} discussion={discussions} />
             ))}
           </Row>
         </div>
@@ -73,9 +72,17 @@ const Discussion = () => {
         <h2>Leave a review</h2>
       </div>
       <div className="forumtitle col">
-        <h2>Older Reviews</h2>
+        <h2>General Forum</h2>
       </div>
       <div className="forum">{/* old review here */}</div>
+      <DiscussionCard
+        movie={{
+          _id: "general",
+          title: "General",
+          img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+        }}
+        discussion={discussions}
+      />
       <Pagination
         cardsPerPage={cardsPerPage}
         totalMovies={movieList.length}

@@ -42,8 +42,7 @@ const Listings = () => {
   const currentMovies = filtered.slice(indexOfFirstCard, indexOfLastCard);
 
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
-  console.log(query);
-  console.log(filtered);
+
   if (error) {
     return (
       <h1>

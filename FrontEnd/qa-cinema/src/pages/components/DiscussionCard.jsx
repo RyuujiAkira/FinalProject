@@ -2,6 +2,7 @@ import { FaStar } from "react-icons/fa";
 import { Card, Row, Col, Dropdown, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import axios from "axios";
+import ExistingReview from "./ExistingReview";
 const DiscussionCard = ({ movie, discussion }) => {
   const [userName, setUserName] = useState("");
   const [comment, setComment] = useState("");
@@ -20,21 +21,38 @@ const DiscussionCard = ({ movie, discussion }) => {
     setHoverValue(undefined);
   };
   const makeDiscussion = () => {
-    const commentBuilder = {
-      movie_id: movie._id,
-      datePosted: Date.now(),
-      userName: userName,
-      comment: comment,
-      rating: stars.length,
-    };
+    if (movie._id === "general") {
+      const commentBuilder = {
+        movie_id: movie._id,
+        datePosted: Date.now(),
+        userName: userName,
+        comment: comment,
+      };
 
-    axios
-      .post("http://localhost:6969/createComment", commentBuilder)
-      .then(console.log(commentBuilder))
-      .catch((error) => {
-        console.log(error);
-      });
-    console.log(commentBuilder);
+      axios
+        .post("http://localhost:6969/createComment", commentBuilder)
+        .then(console.log(commentBuilder))
+        .catch((error) => {
+          console.log(error);
+        });
+      console.log(commentBuilder);
+    } else {
+      const commentBuilder = {
+        movie_id: movie._id,
+        datePosted: Date.now(),
+        userName: userName,
+        comment: comment,
+        rating: stars.length,
+      };
+
+      axios
+        .post("http://localhost:6969/createComment", commentBuilder)
+        .then(console.log(commentBuilder))
+        .catch((error) => {
+          console.log(error);
+        });
+      console.log(commentBuilder);
+    }
   };
   const styles = {
     container: {
@@ -61,10 +79,13 @@ const DiscussionCard = ({ movie, discussion }) => {
       padding: 10,
     },
   };
+
+  const idFiltered = discussion.filter((review) => {
+    return review.movie_id.includes(movie._id);
+  });
   const [currentValue, setCurrentValue] = React.useState(0);
   const [hoverValue, setHoverValue] = React.useState(undefined);
-  console.log(userName);
-  console.log(comment);
+
   return (
     <div>
       <Col>
@@ -81,9 +102,7 @@ const DiscussionCard = ({ movie, discussion }) => {
             </Card.Text>
           </Card.Body>
           <Card.Footer className="text-center">
-            <h3>
-              {movie.title} <span>username</span>
-            </h3>
+            <h3>{movie.title}</h3>
             <Form onSubmit={makeDiscussion}>
               <label for="userName">UserName</label>
               <input
@@ -123,6 +142,8 @@ const DiscussionCard = ({ movie, discussion }) => {
                 Submit
               </button>
             </Form>
+
+            <ExistingReview review={idFiltered} />
           </Card.Footer>
         </Card>
       </Col>
