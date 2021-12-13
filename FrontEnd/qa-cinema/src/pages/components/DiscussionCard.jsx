@@ -14,12 +14,12 @@ const DiscussionCard = ({ movie, discussion }) => {
   const handleClick = (value) => {
     setCurrentValue(value);
   };
-  const handleMouseOver = (value) => {
-    setHoverValue(value);
-  };
-  const handleMouseLeave = () => {
-    setHoverValue(undefined);
-  };
+  // const handleMouseOver = (value) => {
+  //   setHoverValue(value);
+  // };
+  // const handleMouseLeave = () => {
+  //   setHoverValue(undefined);
+  // };
   const makeDiscussion = () => {
     if (movie._id === "general") {
       const commentBuilder = {
@@ -42,7 +42,7 @@ const DiscussionCard = ({ movie, discussion }) => {
         datePosted: Date.now(),
         userName: userName,
         comment: comment,
-        rating: stars.length,
+        rating: currentValue,
       };
 
       axios

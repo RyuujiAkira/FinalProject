@@ -72,7 +72,7 @@ const Discussion = () => {
         <h2>Leave a review</h2>
       </div>
       <div className="forumtitle col">
-        <h2>General Forum</h2>
+        <h2>General Forum (use this start system to rate our cinema)</h2>
       </div>
       <div className="forum">{/* old review here */}</div>
       <DiscussionCard
