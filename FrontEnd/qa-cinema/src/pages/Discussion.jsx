@@ -71,6 +71,11 @@ const Discussion = () => {
       <div style={styles.container}>
         <h2>Leave a review</h2>
       </div>
+      <Pagination
+        cardsPerPage={cardsPerPage}
+        totalMovies={movieList.length}
+        paginate={paginate}
+      />
       <div className="forumtitle col">
         <h2>General Forum (use this start system to rate our cinema)</h2>
       </div>
@@ -82,11 +87,6 @@ const Discussion = () => {
           img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
         }}
         discussion={discussions}
-      />
-      <Pagination
-        cardsPerPage={cardsPerPage}
-        totalMovies={movieList.length}
-        paginate={paginate}
       />
     </div>
   );
