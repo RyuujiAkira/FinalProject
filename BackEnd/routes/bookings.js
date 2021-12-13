@@ -64,6 +64,7 @@ router.post("/createComment", (req, res, next) => {
     .save()
 
     .then((result) => {
+      console.log(discussion);
       res.status(201).send(`${result} saved to database!`);
     })
 
@@ -110,6 +111,15 @@ router.put("/updateComment/:id", (req, res) => {
       console.log(`error :( : ${error}`);
     }
     res.status(202).send("Updated");
+  });
+});
+router.get("/getAllComments", (req, res) => {
+  console.log("getAll");
+  Discussion.find((error, discussionList) => {
+    if (error) {
+      console.log(`error :( : ${error}`);
+    }
+    res.send(discussionList).status(202);
   });
 });
 
