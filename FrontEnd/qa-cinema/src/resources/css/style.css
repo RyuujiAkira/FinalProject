@@ -1,8 +1,21 @@
 body {
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
+        background: linear-gradient(rgba(0, 0.2, 0.4, 0.6), rgba(0, 0.2, 0.4, 0.6)), url("https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dGhlYXRyZSUyMHNlYXRzfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60");
+
     background-repeat: repeat-y;
     background-position: center;
     background-size: cover;
+    display: block;
+}
+#navLogo{
+    position: relative;
+    max-height: 70px;
+    max-width: 70px;
+    padding:3px;
+    
+    /* right: 50px; */
+    bottom: auto;
+    
 }
 
 #contactUsBody {
@@ -71,16 +84,39 @@ body {
 }
 
 #featuredCaro {
-    background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
-    color: white;
+    /* background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050); */
+    color: black;
+    max-width: 1000px;
+    max-height: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    
 
+}
+#Headtxt,#Subtxt{
+    color: white;
+}
+
+
+#CaroImg{
+    position: absolute;
+    border-radius: 5px ;
+    max-height: 1000px;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
 }
 
 #Homebody {
 
-    background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
+    /* background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050); */
+
 
 }
+
+
 
 #navbar {
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
@@ -89,6 +125,12 @@ body {
 #listingsBody {
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
 
+}
+
+#ListingSearch{
+    float : right;
+    -webkit-box-shadow: 5px 5px 28px 5px #000000; 
+box-shadow: 5px 5px 28px 5px #000000;
 }
 
 #listingTimeBTN {

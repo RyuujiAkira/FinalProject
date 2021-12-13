@@ -54,7 +54,7 @@ const Listings = () => {
   } else {
     let banana = (
       <div id="listingsBody">
-        <SearchBar query={query} setQuery={updateQuery} />
+        <SearchBar id= "ListingSearch" query={query} setQuery={updateQuery} />
         <Container>
           <Row>
             {currentMovies.map((movie) => (
