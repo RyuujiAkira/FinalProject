@@ -12,7 +12,9 @@ const UpcomingCard = (props) => {
           <Card.Body>
             <Card.Title>{props.movie.title}</Card.Title>
             <Card.Text>
-              {props.movie.description}
+              {props.movie.description} <br></br> <strong>Cast : </strong>
+              {props.movie.actors} <br></br> <strong>Director: </strong>
+              {props.movie.director}
               <br></br> Release Date: {date}
             </Card.Text>
           </Card.Body>

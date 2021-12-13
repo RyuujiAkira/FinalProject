@@ -23,6 +23,10 @@ const MoviesSchema = new Schema({
     type: Date,
     required: true,
   },
+  description: {
+    type: String,
+    required: true,
+  },
 });
 
 const Movies = model("Movies", MoviesSchema);

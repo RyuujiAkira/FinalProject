@@ -16,7 +16,6 @@ import Payment from "../Payment";
 
 import OpeningTimes from "../OpeningTimes";
 
-
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -39,19 +38,6 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
-
-
-                  <NavDropdown.Item as={Link} to={"/upcoming"}>
-                    Upcoming
-                  </NavDropdown.Item>
-
-                  <NavDropdown.Item as={Link} to={"/NewListings"}>
-                    NewListings
-
-                  </NavDropdown.Item>
-                  {/* <NavDropdown.Item as={Link} to={"/NewListings"}>
-                    NewListings
-                  </NavDropdown.Item> */}
 
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
@@ -100,19 +86,9 @@ const NavBar = () => {
             <Listings />
           </Route>
           <Route path="/upcoming">
-            <newListings />
+            <NewListings />
           </Route>
 
-
-
-          <Route path="/NewListings">
-            <NewListings />
-
-
-          </Route>
-          {/* <Route path="/NewListings">
-            <NewListings />
-          </Route> */}
           <Route path="/upcoming">
             <NewListings />
           </Route>
