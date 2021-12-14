@@ -142,3 +142,30 @@ box-shadow: 5px 5px 28px 5px #000000;
     color: white;
     background-color: grey;
 }
+
+.main-footer{
+    
+    background-color: rgb(64, 67, 235);
+    color: white;
+    padding-top: 3em;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+  }
+
+  .page-container{
+      display:flex;
+      flex-direction: column;
+      min-height: 100vh;
+  }
+
+  .content-wrap{
+      flex:1;
+  }
+
+  .column2{
+      text-align: right;
+  }
+
+
+  
