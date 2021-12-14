@@ -31,7 +31,7 @@ const About = () => {
                 <Card.Body>
                   <Card.Title className="text-center">Fraser Smith</Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Scum Master</h6>
+                    <h6 class="text-center">Scrum Master</h6>
                     Programming experience derived from Python programming in physics research.
                   </Card.Text>
                 </Card.Body>
