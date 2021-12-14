@@ -77,17 +77,21 @@ const Discussion = () => {
         paginate={paginate}
       />
       <div className="forumtitle col">
-        <h2>General Forum (use this start system to rate our cinema)</h2>
+        <h2>General Forum (use this star system to rate our cinema)</h2>
       </div>
       <div className="forum">{/* old review here */}</div>
-      <DiscussionCard
-        movie={{
-          _id: "general",
-          title: "General",
-          img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-        }}
-        discussion={discussions}
-      />
+      <div className="erm">
+        <div className="card">
+          <DiscussionCard
+            movie={{
+              _id: "general",
+              title: "How was your experience",
+              img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
+            }}
+            discussion={discussions}
+          />
+        </div>
+      </div>
     </div>
   );
 };
@@ -115,6 +119,21 @@ const styles = {
     borderRadius: 5,
     width: 100,
     padding: 10,
+  },
+  card: {
+    width: "90%",
+    maxWidth: "400px",
+    padding: "5rem 2.5rem",
+    borderRadius: "1rem",
+    border: "1px solid transparent",
+    backdropFilter: "blur(1rem)",
+    borderTopColor: "rgba(225, 225, 225, 0.5)",
+    borderBottomColor: "rgba(225, 225, 225, 0.5)",
+    borderLeftColor: "rgba(225, 225, 225, 0.5)",
+    borderRightColor: "rgba(225, 225, 225, 0.5)",
+  },
+  erm: {
+    backgroundColor: "rgba(225, 225, 225, 0.1)",
   },
 };
 export default Discussion;

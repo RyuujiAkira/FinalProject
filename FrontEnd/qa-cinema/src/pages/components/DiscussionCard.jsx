@@ -3,6 +3,7 @@ import { Card, Row, Col, Dropdown, Form } from "react-bootstrap";
 import React, { useState } from "react";
 import axios from "axios";
 import ExistingReview from "./ExistingReview";
+
 const DiscussionCard = ({ movie, discussion }) => {
   const [userName, setUserName] = useState("");
   const [comment, setComment] = useState("");
@@ -60,6 +61,7 @@ const DiscussionCard = ({ movie, discussion }) => {
       display: "flex",
       flexDirection: "column",
       alignItems: "center",
+      backgroundColor: "rgba(225, 225, 225, 0.1)",
     },
     stars: {
       display: "flex",
@@ -88,9 +90,9 @@ const DiscussionCard = ({ movie, discussion }) => {
   const [hoverValue, setHoverValue] = React.useState(undefined);
 
   return (
-    <div>
+    <div className="container">
       <Col>
-        <Card className="text-white glassCard" style={{ height: "80%" }}>
+        <Card className="card text-white glassCard" style={{ height: "80%" }}>
           <Card.Img
             className="mx-auto"
             src={movie.img}
@@ -105,12 +107,16 @@ const DiscussionCard = ({ movie, discussion }) => {
           <Card.Footer className="text-center">
             <h3>{movie.title}</h3>
             <Form onSubmit={makeDiscussion}>
-              <label for="userName">UserName</label>
-              <input
-                type="text"
-                placeholder="Username"
-                onChange={(e) => setUserName(e.target.value)}
-              ></input>
+              <div>
+                <input
+                  type="text"
+                  placeholder="Username"
+                  onChange={(e) => setUserName(e.target.value)}
+                ></input>
+              </div>
+              <div>
+                <h6>We appreciate your feedback</h6>
+              </div>
               <textarea
                 rows="5"
                 cols="50"
