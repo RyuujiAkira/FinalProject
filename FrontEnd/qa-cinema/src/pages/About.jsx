@@ -1,6 +1,6 @@
 import { Card, Row, Col } from "react-bootstrap";
-import { BsGithub } from "react-icons/bs"
-import { MdEmail } from "react-icons/md"
+import { BsGithub } from "react-icons/bs";
+import { MdEmail } from "react-icons/md";
 import { Link } from "react-router-dom";
 import "../resources/css/aboutus.css";
 import qalogo from "../resources/images/QACINEMA.png";
@@ -17,7 +17,9 @@ const About = () => {
             <p class="lead mb-4">Find out about the members behind QA Cinema</p>
             <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
               <Link to="/contactus">
-                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Contact QA Cinema</button>
+                <button type="button" class="btn btn-primary btn-lg px-4 gap-3">
+                  Contact QA Cinema
+                </button>
               </Link>
             </div>
           </div>
@@ -28,16 +30,26 @@ const About = () => {
           <Row className="pt-5">
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/90899013?v=4" alt="Fraser Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/90899013?v=4"
+                  alt="Fraser Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
                   <Card.Title className="text-center">Fraser Smith</Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Role</h6>
-                    Short description about yourself
+                    <h6 class="text-center">Scrum Master</h6>
+                    Programming experience derived from Python programming in physics research.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/Fraser-A-N-Smith" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Fraser-A-N-Smith"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -46,16 +58,29 @@ const About = () => {
             </Col>
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/90904963?v=4" alt="Kieran Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/90904963?v=4"
+                  alt="Kieran Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
-                  <Card.Title className="text-center text-de">Kieran Goodinson</Card.Title>
+                  <Card.Title className="text-center text-de">
+                    Kieran Goodinson
+                  </Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Role</h6>
-                    Short description about yourself
+                    <h6 class="text-center">Javascript extraordinaire</h6>
+                    Ex-construction worker that is now a professional coffee
+                    drinker that writes js sometimes
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/Kieran0507" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Kieran0507"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -64,16 +89,28 @@ const About = () => {
             </Col>
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/37118596?v=4" alt="Jonathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/37118596?v=4"
+                  alt="Jonathan Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
-                  <Card.Title className="text-center">Jonathan Rabaja</Card.Title>
+                  <Card.Title className="text-center">
+                    Jonathan Rabaja
+                  </Card.Title>
                   <Card.Text>
                     <h6 class="text-center">Front-end Developer</h6>
                     Likes playing video games in my free time and doing front-end coding to create visually appealing websites.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/RyuujiAkira/" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/RyuujiAkira/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -85,16 +122,28 @@ const About = () => {
           <Row className="mt-5 pb-5">
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898581?v=4" alt="=Junathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/91898581?v=4"
+                  alt="=Junathan Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
-                  <Card.Title className="text-center">Junathan Abraham-Odukale</Card.Title>
+                  <Card.Title className="text-center">
+                    Junathan Abraham-Odukale
+                  </Card.Title>
                   <Card.Text>
                     <h6 class="text-center">Role</h6>
                     Short description about yourself
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/junathana23" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/junathana23"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -103,7 +152,13 @@ const About = () => {
             </Col>
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898623?v=4" alt="Adam Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/91898623?v=4"
+                  alt="Adam Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
                   <Card.Title className="text-center">Adam Ateye</Card.Title>
                   <Card.Text>
@@ -112,7 +167,11 @@ const About = () => {
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/Adam-Ateye" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/Adam-Ateye"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -121,7 +180,13 @@ const About = () => {
             </Col>
             <Col className="mx-1">
               <Card className="text-white glassCard">
-                <Card.Img variant="top" src="https://avatars.githubusercontent.com/u/91898546?v=4" alt="Jonathan Github Profile Pic" className="mx-auto mt-4" style={{ height: "6em", width: "6em", borderRadius: "50%" }} />
+                <Card.Img
+                  variant="top"
+                  src="https://avatars.githubusercontent.com/u/91898546?v=4"
+                  alt="Jonathan Github Profile Pic"
+                  className="mx-auto mt-4"
+                  style={{ height: "6em", width: "6em", borderRadius: "50%" }}
+                />
                 <Card.Body>
                   <Card.Title className="text-center">Sarah Khan</Card.Title>
                   <Card.Text>
@@ -130,7 +195,11 @@ const About = () => {
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
-                  <a href="https://github.com/sarahkgh" target="_blank" rel="noreferrer">
+                  <a
+                    href="https://github.com/sarahkgh"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
                     <BsGithub size={28} className="mx-2" />
                   </a>
                   <MdEmail size={28} className="mx-2" />
@@ -297,7 +366,7 @@ const About = () => {
           </div>
         </div>
       </div>
-    </div >
+    </div>
   );
 };
 

@@ -2,6 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import Form from 'react-bootstrap/Form'
 
 
 const Bookings = () => {
@@ -135,26 +136,65 @@ const Bookings = () => {
   }
 
   //************************************** */
-  return (<div>
-    <h1>Make your Booking</h1>
-    <span>Movie</span>
+  return (<div class="booking">
+    <h1 class="bookingHead">Make your Booking</h1>
+    <br/>
+    
     <form onSubmit={MakeBooking}>
-      <input type="text" id="Title" onChange={alterTitle} ref={titleInput} />
+      <Form.Label class="label">
+        Movie Title</Form.Label>
+      <Form.Control class="bookingfield"
+        type="text" id="Title" onChange={alterTitle} ref={titleInput} />
+      <br />
+      <Form.Label class="label">
+        Date</Form.Label>
+      <Form.Control class="bookingfield"
+        type="datetime" onChange={alterDate} id="date" ref={dateInput} />
+      <br />
+      <Form.Label class="label">
+        Username</Form.Label>
+      <Form.Control class="bookingfield"
+        class="bookingfield"
+        type="text" onChange={alterUserName} id="username" ref={userNameInput} />
+      <br />
+      <Form.Label class="label">
+        Seats</Form.Label>
+      <Form.Control class="bookingfield"
+        type="number" onChange={alterSeats} id="seats" ref={seatInput} />
+      <br />
+      <Form.Label class="label">
+        Adult Admissions</Form.Label>
+      <Form.Control class="bookingfield"
+        type="number" onChange={alterAdults} id="adult" ref={adultInput} />
+      <br />
+      <Form.Label class="label">
+        Child Admissions</Form.Label>
+      <Form.Control class="bookingfield"
+        type="number" onChange={alterAdults} id="adult" ref={childInput} />
+      <br />
+      <Form.Label class="label">
+        Consession</Form.Label>
+      <Form.Control class="bookingfield"
+        type="number" id="concession" onChange={alterConcession} ref={concessionInput} />
+
+
+      {/* <input type="text" id="Title" onChange={alterTitle} ref={titleInput} />
       <span>Date</span>
-      <input type="datetime" onChange={alterDate} id="date" ref={dateInput} />
-      <span>Username</span>
-      <input type="text" onChange={alterUserName} id="username" ref={userNameInput} />
-      <span>Seats</span>
-      <input type="number" onChange={alterSeats} id="seats" ref={seatInput} />
-      <span>Adult</span>
-      <input type="number" onChange={alterAdults} id="adult" ref={adultInput} />
-      <span>Child</span>
-      <input type="number" onChange={alterChild} id="child" ref={childInput} />
-      <span>Concession</span>
-      <input type="number" id="concession" onChange={alterConcession} ref={concessionInput} />
-      <button type="submit" id="data">Book Now</button>
+      <input type="datetime" onChange={alterDate} id="date" ref={dateInput} /> */}
+      {/* <span>Username</span>
+      <input type="text" onChange={alterUserName} id="username" ref={userNameInput} /> */}
+      {/* <span>Seats</span>
+      <input type="number" onChange={alterSeats} id="seats" ref={seatInput} /> */}
+      {/* <span>Adult</span>
+      <input type="number" onChange={alterAdults} id="adult" ref={adultInput} /> */}
+      {/* <span>Child</span>
+      <input type="number" onChange={alterChild} id="child" ref={childInput} /> */}
+      {/* <span>Concession</span>
+      <input type="number" id="concession" onChange={alterConcession} ref={concessionInput} /> */}
+      <br/>
+      <Button type="submit" id="data">Book Now</Button>
     </form>
-    <p>Is your order booked?</p>
+    <p class = "bookingHead">Is your order booked?</p>
 
 
     <Button variant="primary" id="listingTimeBTN" as={Link} to={"/payment"}  >

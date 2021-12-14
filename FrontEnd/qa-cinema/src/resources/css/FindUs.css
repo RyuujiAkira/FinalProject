@@ -1,0 +1,14 @@
+#map{
+    float: right;
+    margin-right: 10%;
+    margin-top: 5%;
+    
+}
+#title{
+    color: rgba(240, 248, 255, 0.842);
+    border-style: solid;
+}
+#text{
+    color: aliceblue;
+    
+}
