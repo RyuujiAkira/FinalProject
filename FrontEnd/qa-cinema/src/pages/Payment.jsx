@@ -1,6 +1,11 @@
 import { useEffect } from "react";
+import React from "react";
 
 const Payment = () => {
+
+
+
+
 
     useEffect(function () {
 

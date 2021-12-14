@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import axios from "axios";
 import { Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
-
+import React from "react";
 
 const Bookings = () => {
 
@@ -112,7 +112,16 @@ const Bookings = () => {
 
 
   //*********************************************************************** */
+  //Seating price
 
+  const [price, setPrice] = useState("")
+  const priceInput = useRef(null);
+
+  let alterPrice = () => {
+    setPrice(priceInput.current.value);
+    console.log(priceInput);
+    console.log(price);
+  }
 
 
   //********************************************** */
@@ -133,9 +142,18 @@ const Bookings = () => {
     titleInput.current.value = null;
     console.log("Form Data Cleared");
   }
+  //*************************************** */
+
+  // const [isShow, setIsShow] = useState(true);
+  // const handleClick = () => {
+  //   setIsShow(!isShow);
+  //   console.log(isShow.value);
+  // };
+
+
 
   //************************************** */
-  return (<div>
+  return (<div id="parent">
     <h1>Make your Booking</h1>
     <span>Movie</span>
     <form onSubmit={MakeBooking}>
@@ -152,14 +170,26 @@ const Bookings = () => {
       <input type="number" onChange={alterChild} id="child" ref={childInput} />
       <span>Concession</span>
       <input type="number" id="concession" onChange={alterConcession} ref={concessionInput} />
-      <button type="submit" id="data">Book Now</button>
+      {/* ****************************************** */}
+      <select name="seating" ref={priceInput} onChange={alterPrice}>
+        <option value="standard">Standard</option>
+        <option value="premium">Premium</option>
+      </select>
+
+      {/* <>{isShow ? <h1>show/hide typo</h1> : <></>}
+        <button onClick={handleClick}>Toggle</button>
+      </> */}
+
+
+      <button type="submit" id="data" >Book Now</button>
+
     </form>
     <p>Is your order booked?</p>
+    <div id="here">
 
+    </div>
 
-    <Button variant="primary" id="listingTimeBTN" as={Link} to={"/payment"}  >
-      Pay Now
-    </Button>
+    <Button variant="primary" id="listingTimeBTN" as={Link} to={{ pathname: "/payment", state: price }}  >Pay Now</Button>
 
 
 
