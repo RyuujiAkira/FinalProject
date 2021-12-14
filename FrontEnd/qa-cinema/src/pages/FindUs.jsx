@@ -22,13 +22,13 @@ const FindUs = () => {
         />
         <Figure.Caption id="text">
           <h3>
-            1298 Long Road
-            <br /> Solihull
-            <br /> Birmingham
-            <br /> B94 7JH
+          8, St James's Bldg,  
+            <br /> 61-95 Oxford St,
+            <br /> Manchester,
+            <br /> M1 6FQ
           </h3>
           <br />
-          <h3>Local busses to our QA cinema bus stop:</h3>
+          <h3>Local bus stops:</h3>
           <h3>94</h3>
           <h3>X62</h3>
           <h3>12</h3>
