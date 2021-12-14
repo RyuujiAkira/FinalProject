@@ -27,10 +27,37 @@ const DiscussionCard = ({ movie, discussion }) => {
         movie_id: movie._id,
         datePosted: Date.now(),
         userName: userName,
-        comment: comment,
+        comment: moderate(comment),
         rating: currentValue,
       };
+      const moderate = (text) => {
+        const badNouns = ["bad code", "fuck", "shit", "crap", "idiot"];
+        // const replacementWords = [
+        //   "buttercup",
+        //   "daisy",
+        //   "darling",
+        //   "excellent programmer",
+        //   "lovely person",
+        // ];
 
+        let stopMod = false;
+        let badWordCount = 0;
+
+        for (let i = 0; i < badNouns.size; i++) {
+          if (text.includes(badNouns[i]) == true) {
+            // stopMod = true;
+            // badWordCount += 1;
+            const replacement = "";
+            text = replacement;
+          } else {
+            text = text;
+          }
+        }
+        // // const modResponse = `There were ${badWordCount} improper words in your review`;
+        // if (badWordCount > 0) {
+        //   return text;
+        // }
+      };
       axios
         .post("http://localhost:6969/createComment", commentBuilder)
         .then(console.log(commentBuilder))

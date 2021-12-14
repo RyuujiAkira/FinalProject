@@ -32,7 +32,6 @@ const Discussion = () => {
     setHoverValue(undefined);
   };
 
-
   useEffect(() => {
     axios
       .get("http://localhost:6969/watchAll")
@@ -57,6 +56,31 @@ const Discussion = () => {
   const currentMovies = movieList.slice(indexOfFirstCard, indexOfLastCard);
   console.log(movieList);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  //   const moderate = (text) => {
+  //     const badNouns = ["bad code", "fuck", "shit", "crap", "idiot"];
+  //     const replacementWords = [
+  //       "buttercup",
+  //       "daisy",
+  //       "darling",
+  //       "excellent programmer",
+  //       "lovely person",
+  //     ];
+
+  //     let stopMod = false;
+  //     let badWordCount = 0;
+
+  //     for (let i = 0; i < badNouns.size; i++) {
+  //       if ((text.indexOf !== -1) == true) {
+  //         stopMod = true;
+  //         badWordCount += 1;
+  //         text.replace(badNouns[i], replacementWords[i]);
+  //       }
+  //     }
+  //     const modResponse = `There were ${badWordCount} improper words in your review`;
+  //     if (badWordCount > 0) {
+  //       document.body.appendChild(<h1>{modResponse}</h1>);
+  //     }
+  //   };
   return (
     <div className="Discussion">
       <div className="container" id="container">
@@ -68,28 +92,7 @@ const Discussion = () => {
             ))}
           </Row>
 
-    const moderate = (text) => {
-        const badNouns = ["bad code", "fuck", "shit", "crap", "idiot"];
-        const replacementWords = ["buttercup", "daisy", "darling", "excellent programmer", "lovely person"];
-
-        let stopMod = false;
-        let badWordCount = 0;
-
-        for (let i = 0; i < badNouns.size; i++) {
-
-            if ((text.indexOf !== -1) == true) {
-
-                stopMod = true;
-                badWordCount += 1;
-                text.replace(badNouns[i], replacementWords[i]);
-            }
-        }
-        const modResponse = `There were ${badWordCount} improper words in your review`;
-        if (badWordCount > 0) {
-            document.body.appendChild(<h1>{modResponse}</h1>)
-        }
-    }
-    return (
+          {/* return (
         <div className="Discussion">
             <div className="container" id="container">
                 <h1>Discussion</h1>
@@ -212,8 +215,7 @@ const Discussion = () => {
                         username <span>date</span>
                     </div>
                 </div>
-            </div>
-
+            </div> */}
         </div>
       </div>
       <div style={styles.container}>
