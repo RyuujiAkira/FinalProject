@@ -15,73 +15,46 @@ const DiscussionCard = ({ movie, discussion }) => {
   const handleClick = (value) => {
     setCurrentValue(value);
   };
-  // const handleMouseOver = (value) => {
-  //   setHoverValue(value);
-  // };
-  // const handleMouseLeave = () => {
-  //   setHoverValue(undefined);
-  // };
+
   const makeDiscussion = () => {
-    if (movie._id === "general") {
-      const commentBuilder = {
-        movie_id: movie._id,
-        datePosted: Date.now(),
-        userName: userName,
-        comment: moderate(comment),
-        rating: currentValue,
-      };
-      const moderate = (text) => {
-        const badNouns = ["bad code", "fuck", "shit", "crap", "idiot"];
-        // const replacementWords = [
-        //   "buttercup",
-        //   "daisy",
-        //   "darling",
-        //   "excellent programmer",
-        //   "lovely person",
-        // ];
+    const moderate = (text) => {
+      const badNouns = [
+        "bad code",
+        "fuck",
+        "shit",
+        "crap",
+        "idiot",
+        "wank",
+        "shit",
+        "bollocks",
+        "cunt",
+        "dick",
+      ];
 
-        let stopMod = false;
-        let badWordCount = 0;
-
-        for (let i = 0; i < badNouns.size; i++) {
-          if (text.includes(badNouns[i]) == true) {
-            // stopMod = true;
-            // badWordCount += 1;
-            const replacement = "";
-            text = replacement;
-          } else {
-            text = text;
-          }
+      for (let i = 0; i < badNouns.length; i++) {
+        if (text.includes(badNouns[i]) == true) {
+          const replacement = "Message deleted by auto-mod";
+          text = replacement;
+          break;
         }
-        // // const modResponse = `There were ${badWordCount} improper words in your review`;
-        // if (badWordCount > 0) {
-        //   return text;
-        // }
-      };
-      axios
-        .post("http://localhost:6969/createComment", commentBuilder)
-        .then(console.log(commentBuilder))
-        .catch((error) => {
-          console.log(error);
-        });
-      console.log(commentBuilder);
-    } else {
-      const commentBuilder = {
-        movie_id: movie._id,
-        datePosted: Date.now(),
-        userName: userName,
-        comment: comment,
-        rating: currentValue,
-      };
+      }
 
-      axios
-        .post("http://localhost:6969/createComment", commentBuilder)
-        .then(console.log(commentBuilder))
-        .catch((error) => {
-          console.log(error);
-        });
-      console.log(commentBuilder);
-    }
+      return text;
+    };
+    const commentBuilder = {
+      movie_id: movie._id,
+      datePosted: Date.now(),
+      userName: userName,
+      comment: moderate(comment),
+      rating: currentValue,
+    };
+    axios
+      .post("http://localhost:6969/createComment", commentBuilder)
+      .then(console.log(commentBuilder))
+      .catch((error) => {
+        console.log(error);
+      });
+    console.log(commentBuilder);
   };
   const styles = {
     container: {
