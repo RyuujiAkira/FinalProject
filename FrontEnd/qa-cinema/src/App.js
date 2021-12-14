@@ -8,12 +8,13 @@ function App() {
   return (
     <div className="App">
       <div className="page-container">
-      <div className="content-wrap">
-      <NavBar />
+        <div className="content-wrap">
+          <NavBar />
+        </div>
+      </div>
       <Footer />
-</div>
-</div>
     </div>
+
   );
 }
 
