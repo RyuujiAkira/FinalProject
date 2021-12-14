@@ -12,7 +12,7 @@ router.post("/create", (req, res, next) => {
     .save()
 
     .then((result) => {
-      res.status(201).send(`${result} saved to database!`);
+      res.status(201).send(`${result.movieTitle} saved to database!`);
     })
 
     .catch((error) => {
@@ -29,7 +29,7 @@ router.post("/direct", (req, res, next) => {
     .save()
 
     .then((result) => {
-      res.status(201).send(`${result} saved to database!`);
+      res.status(201).send(`${result.title} saved to database!`);
     })
 
     .catch((error) => {
