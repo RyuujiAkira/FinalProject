@@ -17,10 +17,6 @@ const ListingsCard = (props) => {
               {props.movie.actors} <br></br> <strong>Director: </strong>
               {props.movie.director}
               <br />
-              <strong>
-                Showing times: <br />
-                16:30 <br></br> 18:00 <br /> 19:30 <br /> 21:00
-              </strong>
             </Card.Text>
             <Button
               variant="primary"

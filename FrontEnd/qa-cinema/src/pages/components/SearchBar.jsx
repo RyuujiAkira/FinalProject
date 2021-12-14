@@ -1,9 +1,9 @@
 const SearchBar = ({ query, setQuery }) => {
   return (
-    <input
+    <input class = "searchbar"
       key="random1"
       value={query}
-      placeholder={"search movies"}
+      placeholder={"  Search Movies"}
       onChange={(e) => setQuery(e.target.value)}
     />
   );

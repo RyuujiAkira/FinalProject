@@ -23,7 +23,7 @@ const Home = () => {
 
                     <Card>
                         <Card.Img id="CaroImg" id="CaroImg" variant="top" src=" https://cdn.vox-cdn.com/thumbor/rH03UWCLX4mcxPuigd4VZm6VoaQ=/0x0:990x652/920x613/filters:focal(416x247:574x405):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/67170965/Screen_Shot_2015-05-08_at_12.32.14_PM.0.0.png" />
-                        <Card.Body id="featuredCaro">
+                        <Card.Body >
                             <Card.Text >
                                 Welcome to QA Cinemas the UK's Number 1 cinema!
                                 Book a viewing for the latest Films at one of Our screens Today!
