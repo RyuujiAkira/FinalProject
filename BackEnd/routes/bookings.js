@@ -72,47 +72,8 @@ router.post("/createComment", (req, res, next) => {
       next(error);
     });
 });
-router.get("/getCommentName/:userName", (req, res) => {
-  const name = req.params.name;
 
-  Discussion.find({ userName: name }, (error, result) => {
-    if (error) {
-      console.log(`error :( : ${error}`);
-    }
-    res.status(200).send(result);
-  });
-});
-router.delete("/deleteCommentId/:id", (req, res) => {
-  const id = req.params.id;
-  console.log(id);
-  Discussion.findByIdAndDelete(id, (error) => {
-    if (error) {
-      console.log(`error :( : ${error}`);
-    }
-    res.status(202).send("Deleted!");
-  });
-});
-router.get("/getComment/:comment", (req, res) => {
-  const comment = req.params.comment;
 
-  Discussion.find({ comment: comment }, (error, result) => {
-    if (error) {
-      console.log(`error :( : ${error}`);
-    }
-    res.status(200).send(result);
-  });
-});
-router.put("/updateComment/:id", (req, res) => {
-  const id = req.params.id;
-  const discussion = new Discussion(req.body);
-
-  discussion.updateOne({ _id: id }, (error, result) => {
-    if (error) {
-      console.log(`error :( : ${error}`);
-    }
-    res.status(202).send("Updated");
-  });
-});
 router.get("/getAllComments", (req, res) => {
   console.log("getAll");
   Discussion.find((error, discussionList) => {
