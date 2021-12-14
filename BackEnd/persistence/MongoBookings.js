@@ -35,7 +35,9 @@ const MongoBookingsSchema = new Schema({
         required: true
     }
 
-})
+}, {
+    versionKey: false
+});
 
 
 
