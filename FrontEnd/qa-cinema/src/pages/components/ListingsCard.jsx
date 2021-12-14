@@ -6,7 +6,7 @@ import { BrowserRouter, Link } from "react-router-dom";
 const ListingsCard = (props) => {
   return (
     <div>
-      <Col xs={4}>
+      <Col>
         <Card style={{ width: "18rem" }}>
           <Card.Img variant="top" src={props.movie.img} />
           <Card.Body>

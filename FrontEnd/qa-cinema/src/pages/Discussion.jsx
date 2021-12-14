@@ -60,7 +60,7 @@ const Discussion = () => {
   return (
     <div className="Discussion">
       <div className="container" id="container">
-        <h1>Discussion</h1>
+        <h1 class="discText">Discussion</h1>
         <div className="row">
           <Row>
             {currentMovies.map((movie) => (
@@ -78,7 +78,9 @@ const Discussion = () => {
         paginate={paginate}
       />
       <div className="forumtitle col">
-        <h2>General Forum (use this star system to rate our cinema)</h2>
+        <h2 class="discText fw-bold">
+          General Forum (use this star system to rate our cinema)
+        </h2>
       </div>
       <div className="forum">{/* old review here */}</div>
       <div className="erm">
