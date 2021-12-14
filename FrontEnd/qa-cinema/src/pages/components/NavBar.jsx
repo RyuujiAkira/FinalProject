@@ -10,8 +10,13 @@ import AroundUs from "../AroundUs";
 import ContactUs from "../ContactUs";
 import FindUs from "../FindUs";
 import Screens from "../Screens";
-import Upcoming from "../Upcoming";
+import Classifications from "../Classifications";
+
+
 import Payment from "../Payment";
+
+import OpeningTimes from "../OpeningTimes";
+
 const NavBar = () => {
   //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
 
@@ -20,8 +25,16 @@ const NavBar = () => {
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
+
+            
+
             <Navbar.Brand as={Link} to={"/"}>
-              Qa Cinema
+              <img src="https://i.ibb.co/fCsstCb/QA-Logo-Turquoise.png" id="navLogo" alt="LOGO" />
+                Qa Cinema
+
+                
+            
+            
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -62,6 +75,12 @@ const NavBar = () => {
                 <Nav.Link as={Link} to={"/aroundUs"}>
                   Around Us
                 </Nav.Link>
+                <Nav.Link as={Link} to={"/openingTimes"}>
+                  Opening Times
+                </Nav.Link>
+                <Nav.Link as={Link} to={"/classifications"}>
+                  Classifications
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </Container>
@@ -74,6 +93,9 @@ const NavBar = () => {
           </Route>
           <Route path="/listings">
             <Listings />
+          </Route>
+          <Route path="/upcoming">
+            <NewListings />
           </Route>
 
           <Route path="/upcoming">
@@ -95,6 +117,10 @@ const NavBar = () => {
             <Payment />
           </Route>
 
+          <Route path="/classifications">
+            <Classifications />
+          </Route>
+
           <Route path="/contactus">
             <ContactUs />
           </Route>
@@ -103,6 +129,12 @@ const NavBar = () => {
           </Route>
           <Route path="/aroundUs">
             <AroundUs />
+          </Route>
+          <Route path="/openingTimes">
+            <OpeningTimes />
+          </Route>
+          <Route path="/classifications">
+            <Classifications />
           </Route>
         </Switch>
       </div>

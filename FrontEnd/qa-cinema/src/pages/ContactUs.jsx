@@ -1,21 +1,32 @@
 import { Form, Button } from "react-bootstrap";
 import { ImLocation2 } from "react-icons/im";
 import { AiOutlineMail } from "react-icons/ai";
-import { useState } from "react";
+import { useState, React } from "react";
+import emailjs from 'emailjs-com';
 
-const ContactUs = () => {
+export default function ContactUs() {
 
     const [validated, setValidated] = useState(false);
 
-    const validationSubmit = (event) => {
-        const form = event.currentTarget;
+    function sendEmail(e) {
+        const form = e.currentTarget;
+        e.preventDefault();
         if (form.checkValidity() === false) {
-            event.preventDefault();
-            event.stopPropagation();
+            e.preventDefault();
+            e.stopPropagation();
         }
-
+        else {
+            window.alert("Email has been sent!");
+        }
         setValidated(true);
-    };
+
+        emailjs.sendForm('service_bsmkosj', 'template_outs34d', e.target, 'user_Dpn0HMLp7C1GAsq1WDyXO')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+    }
 
     return (
         <div class="container-fluid px-5 my-5" id="contactUsBody">
@@ -31,7 +42,7 @@ const ContactUs = () => {
                                                 <h4><ImLocation2 /> Address </h4>
                                                 <p>8, St James's Bldg, 61-95 Oxford St, Manchester M1 6FQ</p>
                                                 <h4 class="pt-3"><AiOutlineMail /> Email</h4>
-                                                <p>fraser.smith@gmail.com</p>
+                                                <p>cinemaqa@gmail.com</p>
                                             </div>
                                         </div>
                                     </div>
@@ -42,7 +53,7 @@ const ContactUs = () => {
                                         <p class="mb-4 text-muted">Get in touch by sending us a message here about anything!</p>
                                     </div>
 
-                                    <Form noValidate validated={validated} onSubmit={validationSubmit}>
+                                    <Form noValidate validated={validated} onSubmit={sendEmail}>
                                         <Form.Group className="mb-3 mx-5" controlId="formGridName">
                                             <Form.Label>Full Name</Form.Label>
                                             <Form.Control type="text" placeholder="Enter name" name="name" id="name" />
@@ -88,5 +99,3 @@ const ContactUs = () => {
         </div>
     )
 };
-
-export default ContactUs;
