@@ -1,9 +1,6 @@
 import { Carousel } from "react-bootstrap";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../resources/css/style.css";
-import Button from "react-bootstrap/Button";
-import { BrowserRouter, Link } from "react-router-dom";
-import { CinemaBanner } from "../resources/images/cinemabanner.jpg";
 
 const Home = () => {
     return (
@@ -13,7 +10,12 @@ const Home = () => {
                 <h1 class="mb-4">QA Cinema</h1>
                 <div class="col-lg-6 mx-auto mb-5">
                     <p class="lead">Welcome to QA Cinema one of the best cinemas in the UK!</p>
-                    <p class="lead mb-4 pb-5">See any of the films below at our Manchester location</p>
+                    <p class="lead mb-4">See any of the films below at our Manchester location</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pb-5">
+                        <Link to="/listings">
+                            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Check our listings here!</button>
+                        </Link>
+                    </div>
                 </div>
             </div>
             <div class="container-fluid">
