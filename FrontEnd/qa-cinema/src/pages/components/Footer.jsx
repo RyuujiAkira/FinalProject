@@ -2,21 +2,21 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <div class="main-footer">
-      <div class="container">
+    <div class="main-footer mt-5 p-2">
+      <div class="container" id="footer-container">
         <div class="row">
           <div class="col">
             <h4>QA Cinema Inc</h4>
 
-            <br></br>
-            <ul class="list-unstyled">
+            {/* <br></br> */}
+            <ul class="list-unstyled" >
               <li>8, St James's Bldg</li>
               <li>61-95 Oxford St,</li>
               <li>Manchester M1 6FQ</li>
             </ul>
           </div>
 
-          <div class="col">
+          <div class="col pt-5">
             <ul>
               <li>
                 <a href="http://localhost:3000/">Home Page</a>
@@ -33,7 +33,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <hr />
+        {/* <hr /> */}
         <div class="row">
           <p class="col-sm">
             &copy;{new Date().getFullYear()} QA CINEMA INC | All right reserved

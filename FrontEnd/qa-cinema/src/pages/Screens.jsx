@@ -3,7 +3,7 @@ import "../resources/css/screens.css";
 const Screens = () => {
   return (
     <>
-      <h3 id="screenText">
+      <h3 class="text-center text-white">
         Below are the screens within the cinema, standard or deluxe.
       </h3>
       <Carousel id="featuredCaro">
