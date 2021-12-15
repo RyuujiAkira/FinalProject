@@ -197,8 +197,8 @@ const About = () => {
                 <Card.Body>
                   <Card.Title className="text-center">Sarah Khan</Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Role</h6>
-                    Short description about yourself
+                    <h6 class="text-center">Front-end Developer</h6>
+                    ICT graduate most familiar with front-end programming languages.
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
