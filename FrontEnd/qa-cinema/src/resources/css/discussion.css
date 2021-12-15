@@ -102,7 +102,8 @@ p {
     left: calc(50% - 60px);
     border: 10px solid white;
 }
-.container{
+
+#container {
     background-color: rgba(225, 225, 225, 0.1);
 }
 .discText{
