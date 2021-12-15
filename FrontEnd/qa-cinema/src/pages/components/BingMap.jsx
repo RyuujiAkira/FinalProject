@@ -5,16 +5,16 @@ const BingMap = () => {
     return (
         <div>
             <BingMapsReact
+                height="40vh"
                 bingMapsKey="Ask Fraser For It"
-                height="500px"
                 mapOptions={{
                     navigationBarMode: "square",
                     showBreadcrumb: true,
                 }}
-                width="500px"
+                width="50vw"
                 viewOptions={{
-                    center: { latitude: 37.234332396, longitude: -115.80666344 },
-                    mapTypeId: "Aerial",
+                    center: { latitude: 53.475780, longitude: -2.242190 },
+                    mapTypeId: "canvasLight",
                 }}
             />
         </div>
