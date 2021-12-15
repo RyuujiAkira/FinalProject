@@ -12,21 +12,24 @@ import FindUs from "../FindUs";
 import Screens from "../Screens";
 import Classifications from "../Classifications";
 
-
 import Payment from "../Payment";
 
 import OpeningTimes from "../OpeningTimes";
 
 const NavBar = () => {
-  //   Routing is done in here, Add extra pages as Routes at the bottom. NavBar also needs editing
-
   return (
     <Router>
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
-              <img src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png" id="navLogo" alt="LOGO" />
+
+              <img
+                src="https://i.ibb.co/fCsstCb/QA-Logo-Turquoise.png"
+                id="navLogo"
+                alt="LOGO"
+              />
+
               Qa Cinema
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -35,7 +38,7 @@ const NavBar = () => {
                 <Nav.Link as={Link} to={"/"}>
                   Home
                 </Nav.Link>
-                {/* maybe move these around or delete the dropdown? */}
+
                 <NavDropdown title="Movies" id="basic-nav-dropdown">
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings

@@ -144,7 +144,7 @@ const DiscussionCard = ({ movie, discussion }) => {
                   );
                 })}
               </div>
-              {/* dropdown was here */}
+
               <button type="submit" style={styles.button}>
                 Submit
               </button>

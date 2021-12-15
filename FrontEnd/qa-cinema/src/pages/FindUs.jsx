@@ -47,28 +47,7 @@ const FindUs = () => {
           </ListGroupItem>
         </ListGroup>
       </Card>
-      {/* <Figure>
-        <Figure.Image
-          id="cinema"
-          width={700}
-          height={180}
-          alt="cinema"
-          src="https://content.fortune.com/wp-content/uploads/2015/02/145031081.jpg"
-        />
-        <Figure.Caption id="text">
-          <h3>
-            1298 Long Road
-            <br /> Solihull
-            <br /> Birmingham
-            <br /> B94 7JH
-          </h3>
-          <br />
-          <h3>Local busses to our QA cinema bus stop:</h3>
-          <h3>94</h3>
-          <h3>X62</h3>
-          <h3>12</h3>
-        </Figure.Caption>
-      </Figure> */}
+
     </div>
   );
 };

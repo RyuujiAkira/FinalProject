@@ -1,10 +1,9 @@
 import React from "react";
 import "../resources/css/discussion.css";
 import { Card, Row, Col, Dropdown, Form } from "react-bootstrap";
-import { FaStar } from "react-icons/fa";
+
 import { useState, useEffect } from "react";
-import { DropdownButton } from "react-bootstrap";
-import { BrowserRouter as Link } from "react-router-dom";
+
 import axios from "axios";
 import DiscussionCard from "./components/DiscussionCard";
 import Pagination from "./components/Pagination";
@@ -25,12 +24,6 @@ const Discussion = () => {
   const handleClick = (value) => {
     setCurrentValue(value);
   };
-  const handleMouseOver = (value) => {
-    setHoverValue(value);
-  };
-  const handleMouseLeave = () => {
-    setHoverValue(undefined);
-  };
 
   useEffect(() => {
     axios
@@ -45,7 +38,6 @@ const Discussion = () => {
       .get("http://localhost:6969/getAllComments")
       .then((response) => {
         setDiscussions(response.data);
-        console.log(discussions);
       })
       .catch((error) => {
         setError(error);
@@ -54,7 +46,7 @@ const Discussion = () => {
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentMovies = movieList.slice(indexOfFirstCard, indexOfLastCard);
-  console.log(movieList);
+
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
 
   return (
@@ -82,7 +74,7 @@ const Discussion = () => {
           General Forum (use this star system to rate our cinema)
         </h2>
       </div>
-      <div className="forum">{/* old review here */}</div>
+
       <div className="erm">
         <div className="card">
           <DiscussionCard

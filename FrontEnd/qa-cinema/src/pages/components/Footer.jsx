@@ -14,19 +14,25 @@ const Footer = () => {
               <li>61-95 Oxford St,</li>
               <li>Manchester M1 6FQ</li>
             </ul>
-          
-        </div>
+          </div>
 
-        <div class="col">
-         <ul>
-           <li><a href="http://localhost:3000/">Home Page</a></li> 
-           <li> <a href="http://localhost:3000/about">About Us</a></li>
-           <li> <a href="http://localhost:3000/contactus">Contact Us</a></li>
-          </ul>
+          <div class="col">
+            <ul>
+              <li>
+                <a href="http://localhost:3000/">Home Page</a>
+              </li>
+              <li>
+                {" "}
+                <a href="http://localhost:3000/about">About Us</a>
+              </li>
+              <li>
+                {" "}
+                <a href="http://localhost:3000/contactus">Contact Us</a>
+              </li>
+            </ul>
           </div>
         </div>
 
-        
         <hr />
         <div class="row">
           <p class="col-sm">
@@ -35,9 +41,6 @@ const Footer = () => {
           </p>
         </div>
       </div>
-      {/* <a href="http://localhost:3000/">Home Page</a>
-        <a href="http://localhost:3000/about">About Us</a>
-        <a href="http://localhost:3000/contactus">Contact Us</a>  */}
     </div>
   );
 };
