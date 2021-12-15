@@ -5,8 +5,6 @@ import { Col, Row } from "react-bootstrap";
 import UpcomingCard from "./components/UpcomingCard";
 import "../resources/css/upcoming.css";
 const NewListings = () => {
-  //   Have api calls in here?
-
   const [error, setError] = useState(null);
 
   const [array, setArray] = useState([]);
@@ -23,13 +21,10 @@ const NewListings = () => {
 
   const filtered = array.filter((movie) => {
     const releaseDate = new Date(movie.releaseDate);
-    console.log(releaseDate);
+
     return releaseDate >= Date.now();
   });
 
-  console.log(array);
-
-  console.log(filtered);
   return (
     <div>
       <h1 class="text-center" id="upcoming">
