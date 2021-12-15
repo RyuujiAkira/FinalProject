@@ -1,12 +1,11 @@
 import Container from "react-bootstrap/Container";
-import { Col, Row } from "react-bootstrap";
+import { Row } from "react-bootstrap";
 import axios from "axios";
 import { useState, useEffect } from "react";
 import ListingsCard from "./components/ListingsCard";
 import SearchBar from "./components/SearchBar";
 import Pagination from "./components/Pagination";
 const Listings = () => {
-  //   makes api calls and maps them out to the card component
   const [movies, setMovies] = useState([]);
   const [error, setError] = useState(null);
   const [query, setQuery] = useState(null);
@@ -36,7 +35,7 @@ const Listings = () => {
     setQuery(query);
     setFiltered(filtered);
   };
-  // trying pagination
+
   const indexOfLastCard = currentPage * cardsPerPage;
   const indexOfFirstCard = indexOfLastCard - cardsPerPage;
   const currentMovies = filtered.slice(indexOfFirstCard, indexOfLastCard);
@@ -53,7 +52,7 @@ const Listings = () => {
   } else {
     let banana = (
       <div id="listingsBody">
-        <SearchBar id= "ListingSearch" query={query} setQuery={updateQuery} />
+        <SearchBar id="ListingSearch" query={query} setQuery={updateQuery} />
         <Container>
           <Row>
             {currentMovies.map((movie) => (

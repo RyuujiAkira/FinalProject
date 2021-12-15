@@ -1,126 +1,87 @@
 import { Carousel } from "react-bootstrap";
-import { Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 import "../resources/css/style.css";
-import Button from "react-bootstrap/Button";
-import { BrowserRouter, Link } from "react-router-dom";
-
 
 const Home = () => {
     return (
-        <div id="Homebody" >
-
-
-            <h2 id = "Headtxt">Home</h2>
-            <p>   </p>
-            <br />
-            <br />
-            <h2 id = "Subtxt">Featured Content</h2>
-
-            <Carousel id="featuredCaro">
-                <Carousel.Item>
-
-
-
-                    <Card>
-                        <Card.Img id="CaroImg" id="CaroImg" variant="top" src=" https://cdn.vox-cdn.com/thumbor/rH03UWCLX4mcxPuigd4VZm6VoaQ=/0x0:990x652/920x613/filters:focal(416x247:574x405):format(webp)/cdn.vox-cdn.com/uploads/chorus_image/image/67170965/Screen_Shot_2015-05-08_at_12.32.14_PM.0.0.png" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text >
-                                Welcome to QA Cinemas the UK's Number 1 cinema!
-                                Book a viewing for the latest Films at one of Our screens Today!
-                            </Card.Text>
-                            <Button variant="primary" id="listingTimeBTN" as={Link} to={"/listings"}  >
-                                Book Now
-                            </Button>
-
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-
-
-                <Carousel.Item>
-                    <Card>
-                        <Card.Img id="CaroImg" id="CaroImg" variant="top" src=" https://images.unsplash.com/photo-1584020933234-43c38930e481?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text>
-                               With Current Restrictions in place in the UK, please insure that a face covering is worn upon entering the cinema, Face coverings do not have to be worn if you are eating and drinking or you are exempt
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-
-
-                <Carousel.Item>
-                    <Card>
-                        
-                        <Card.Img id="CaroImg" id="CaroImg" variant="top" src=" https://pbs.twimg.com/media/FFsKfNLXMAEHk_5?format=jpg&name=large" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text>
-                                Book a Viewing for Spider-Man: No way Home now! Showings from Dec. 15
-                            </Card.Text>
-                            <Button variant="primary" id="listingTimeBTN" as={Link} to={"/listings"}  >
-                                Book Now
-                            </Button>
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-
-
-                <Carousel.Item>
-                    <Card>
-                         
-                        <Card.Img id="CaroImg" id="CaroImg" variant="top" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTstMTpo285SPrUGtNeZ9kjOWbBnuvppnv5UfsfIN9x_rQgfbxY" alt=" https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text>
-                               Book a viewing for Bee movie now!
-                            </Card.Text>
-                            <Button variant="primary" id="listingTimeBTN" as={Link} to={"/listings"}  >
-                                Book Now
-                            </Button>
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-
-
-                <Carousel.Item>
-                    <Card>
-                        <Card.Img id="CaroImg" id="CaroImg" id="CaroImg" variant="top" src=" https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-
-
-                <Carousel.Item>
-                    <Card>
-                        <Card.Img id="CaroImg" id="CaroImg" id="CaroImg" variant="top" src=" https://www.kindpng.com/picc/m/18-189751_movie-placeholder-hd-png-download.png" />
-                        <Card.Body id="featuredCaro">
-                            <Card.Text>
-                                Some quick example text to build on the card title and make up the bulk
-                                of the card's content.
-                            </Card.Text>
-                        </Card.Body>
-                    </Card>
-
-
-                </Carousel.Item>
-            </Carousel>
+        <div class="container-fluid p-0">
+            <div class="mb-5 text-center container-fluid text-white" id="homeHero">
+                <img class="d-block mx-auto" src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png" alt="QA Logo" width="200px" />
+                <h1 class="mb-4">QA Cinema</h1>
+                <div class="col-lg-6 mx-auto mb-5">
+                    <p class="lead">Welcome to QA Cinema one of the best cinemas in the UK!</p>
+                    <p class="lead mb-4">See any of the films below at our Manchester location</p>
+                    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center pb-5">
+                        <Link to="/listings">
+                            <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Check our listings here!</button>
+                        </Link>
+                    </div>
+                </div>
+            </div>
+            <div class="container-fluid">
+                <Carousel>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://www.cineworld.co.uk/static/dam/jcr:186b18a6-36d8-48cc-b33d-ee89d7ead994"
+                            alt="Clifford The Dog"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://www.cineworld.co.uk/static/dam/jcr:62c06030-8254-4119-bc2d-f4b0c9e3870d"
+                            alt="The King's Man"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://www.cineworld.co.uk/static/dam/jcr:16890098-ce3d-4838-9ca5-2e730d15dc5c"
+                            alt="The Matrix Resurrections"
+                        />
+                    </Carousel.Item>
+                    <Carousel.Item>
+                        <img
+                            className="d-block w-100"
+                            src="https://i.ibb.co/c2jMVZQ/Inkedcinemabanner.jpg"
+                            alt="Family Ticket"
+                        />
+                    </Carousel.Item>
+                </Carousel>
+            </div>
+            <div class="container text-white">
+                <h2 class="mt-5 mb-3 text-white">Top Films</h2>
+                <div class="row align-items-center mx-auto">
+                    <div class="col-auto mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid21113.jpg" alt="Spider-man No Way Home" />
+                        <figcaption>SPIDER-MAN NO WAY HOME</figcaption>
+                    </div>
+                    <div class="col-auto  mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid21138.jpg" alt="The Matrix Resurrections" />
+                        <figcaption>THE MATRIX RESURRECTIONS</figcaption>
+                    </div>
+                    <div class="col-auto mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid20288.jpg" alt="Clifford the Big Red Dog" />
+                        <figcaption>CLIFFORD THE BIG RED DOG</figcaption>
+                    </div>
+                </div>
+                <div class="row align-items-center mx-auto my-5">
+                    <div class="col-auto mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid21031.jpg" alt="Encanto" />
+                        <figcaption>ENCANTO</figcaption>
+                    </div>
+                    <div class="col-auto mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid19715.jpg" alt="The King's Man" />
+                        <figcaption>THE KING'S MAN</figcaption>
+                    </div>
+                    <div class="col-auto mx-3">
+                        <img class="film-poster img-fluid" src="https://images.mymovies.net/images/film/cin/350x522/fid21082.jpg" alt="House of Gucci" />
+                        <figcaption>HOUSE OF GUCCI</figcaption>
+                    </div>
+                </div>
+            </div>
         </div>
-
-
     );
 }
 

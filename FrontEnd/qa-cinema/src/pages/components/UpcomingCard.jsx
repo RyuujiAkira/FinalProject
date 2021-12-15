@@ -3,7 +3,7 @@ import Card from "react-bootstrap/Card";
 import { Col } from "react-bootstrap";
 const UpcomingCard = (props) => {
   const date = props.movie.releaseDate.slice(0, 10);
-  console.log(date);
+
   return (
     <div>
       <Col xs={4}>

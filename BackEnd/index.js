@@ -34,3 +34,5 @@ app.use(bookings);
 const server = app.listen(6969, () => {
   console.log("Listening on port 6969");
 });
+
+module.exports=server;
