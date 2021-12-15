@@ -25,16 +25,9 @@ const NavBar = () => {
       <div>
         <Navbar bg="light" expand="lg">
           <Container>
-
-            
-
             <Navbar.Brand as={Link} to={"/"}>
-              <img src="https://i.ibb.co/fCsstCb/QA-Logo-Turquoise.png" id="navLogo" alt="LOGO" />
-                Qa Cinema
-
-                
-            
-            
+              <img src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png" id="navLogo" alt="LOGO" />
+              Qa Cinema
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">

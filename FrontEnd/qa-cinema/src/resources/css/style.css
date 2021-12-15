@@ -13,10 +13,7 @@ body {
     max-height: 70px;
     max-width: 70px;
     padding: 3px;
-
-    /* right: 50px; */
     bottom: auto;
-
 }
 
 #contactUsBody {
@@ -31,85 +28,67 @@ body {
 }
 
 #uImage {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1595541590080-bd3b5946a280?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1128&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #pg13Image {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1594909122845-11baa439b7bf?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #pg12AImage {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1585951237313-1979e4df7385?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #pg12Image {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1585951237318-9ea5e175b891?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #pg15Image {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1521967906867-14ec9d64bee8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #pg18Image {
-
     background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://images.unsplash.com/photo-1608170825938-a8ea0305d46c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1025&q=80");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
 }
 
 #featuredCaro {
-    /* background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050); */
     color: black;
     max-width: 1000px;
     max-height: 1000px;
     margin-left: auto;
     margin-right: auto;
     display: block;
-
-
 }
 
 #Headtxt, #Subtxt {
     color: white;
 }
 
-
 .CaroImg {
     border-radius: 5px;
 }
 
-#Homebody {
-    /* background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050); */
+#homeHero {
+    background-image: linear-gradient(to top, #000000, #1a141a, #242331, #223649, #0f4b5b, #005c67, #006d70, #117e75, #0f9085, #0ba396, #06b6a6, #00c9b7);
 }
-
-
 
 #navbar {
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
@@ -117,7 +96,6 @@ body {
 
 #listingsBody {
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
-
 }
 
 #ListingSearch {
@@ -137,7 +115,6 @@ body {
 }
 
 .main-footer {
-
     background-color: rgb(64, 67, 235);
     color: white;
     padding-top: 3em;
@@ -170,12 +147,9 @@ body {
     color: white;
 }
 
-
 .booking {
-
     border-radius: 5px;
     background-image: linear-gradient(to left bottom, #707070, #6d6d6d, #6a6a6a, #676767, #646464, #616161, #5f5f5f, #5c5c5c, #595959, #565656, #535353, #505050);
-
     display: block;
     margin-left: 100px;
     margin-right: 100px;
@@ -188,4 +162,8 @@ body {
 
 #ListingSearch {
     padding: 2px;
+}
+
+.film-poster {
+    height: 45vh;
 }
