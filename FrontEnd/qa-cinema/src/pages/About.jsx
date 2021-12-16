@@ -234,7 +234,7 @@ const About = () => {
           </div>
         </div>
         <div class="px-4 py-3 text-start">
-          <div class=" mx-auto card p-4">
+          <div class="col-8 mx-auto card p-4">
             <h1 class="display-5 fw-bold text-center">What is Scrum?</h1>
             <p>
               Scrum is a framework within which people can address complex
@@ -306,7 +306,7 @@ const About = () => {
             </div>
           </div>
           <div class="row pt-5">
-            <div class="my-4 mx-auto p-4 card">
+            <div class="col-8 mx-auto p-4 card">
               <h3 class="text-center">Scrum Meetings</h3>
               <p>
                 There are four different key meetings which take place in the
@@ -358,7 +358,7 @@ const About = () => {
                 improvements to the way the Scrum Team does its work.
               </p>
             </div>
-            <div class=" mx-auto p-4 card">
+            <div class="col-8 mx-auto p-4 mt-5 card">
               <h3 class="text-center">Product Backlog Items</h3>
               <p>
                 The most common type of Product Backlog Item (PBI) is a User
@@ -442,7 +442,7 @@ const About = () => {
               </li>
               <li class="px-4">Can also derive tests from this criteria</li>
             </div>
-            <div class="my-4 mx-auto p-4 card">
+            <div class="col-8 my-4 mx-auto p-4 mt-5 card">
               <h3 class="text-center">Prioritisation using MoSCoW</h3>
               <p>
                 The MoSCoW method is a popular prioritisation techinque used for
