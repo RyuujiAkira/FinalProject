@@ -51,15 +51,13 @@ const Discussion = () => {
 
   return (
     <div className="Discussion">
-      <div className="container" id="container">
+      <div className="container">
         <h1 class="discText">Discussion</h1>
-        <div className="row">
-          <Row>
-            {currentMovies.map((movie) => (
-              <DiscussionCard movie={movie} discussion={discussions} />
-            ))}
-          </Row>
-        </div>
+        <Row>
+          {currentMovies.map((movie) => (
+            <DiscussionCard movie={movie} discussion={discussions} />
+          ))}
+        </Row>
       </div>
       <div style={styles.container}>
         <h2>Leave a review</h2>
@@ -76,16 +74,14 @@ const Discussion = () => {
       </div>
 
       <div className="erm">
-        <div className="card">
-          <DiscussionCard
-            movie={{
-              _id: "general",
-              title: "How was your experience",
-              img: "https://images.unsplash.com/photo-1577563908411-5077b6dc7624?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80",
-            }}
-            discussion={discussions}
-          />
-        </div>
+        <DiscussionCard
+          movie={{
+            _id: "general",
+            title: "How was your experience",
+            img: "https://i.ibb.co/fCsstCb/QA-Logo-Turquoise.png",
+          }}
+          discussion={discussions}
+        />
       </div>
     </div>
   );

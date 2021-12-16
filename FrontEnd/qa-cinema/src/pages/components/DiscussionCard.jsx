@@ -90,21 +90,21 @@ const DiscussionCard = ({ movie, discussion }) => {
   const [hoverValue, setHoverValue] = React.useState(undefined);
 
   return (
-    <div className="container">
-      <Col>
-        <Card className="card text-white glassCard" style={{ height: "80%" }}>
+    <Card
+      className="card text-white glassCard mx-auto"
+      style={{ height: "80%" }}
+    >
+      <Row>
+        <Col>
           <Card.Img
-            className="mx-auto"
+            className="img-fluid p-4"
             src={movie.img}
             variant="top"
-            style={{ height: "12em", width: "8em" }}
+            style={{ height: "30em", width: "24em" }}
           />
+        </Col>
+        <Col>
           <Card.Body>
-            <Card.Text>
-              <h6>Review</h6>
-            </Card.Text>
-          </Card.Body>
-          <Card.Footer className="text-center">
             <h3>{movie.title}</h3>
             <Form onSubmit={makeDiscussion}>
               <div>
@@ -149,12 +149,13 @@ const DiscussionCard = ({ movie, discussion }) => {
                 Submit
               </button>
             </Form>
-
-            <ExistingReview review={idFiltered} />
-          </Card.Footer>
-        </Card>
-      </Col>
-    </div>
+          </Card.Body>
+        </Col>
+      </Row>
+      <Card.Footer className="text-start">
+        <ExistingReview review={idFiltered} />
+      </Card.Footer>
+    </Card>
   );
 };
 
