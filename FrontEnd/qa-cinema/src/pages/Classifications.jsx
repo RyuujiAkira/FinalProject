@@ -11,7 +11,7 @@ const Classifications = () => {
 
     return (
         <div class="container-fluid">
-            <div class="px-4 py-5 text-center text-white">
+            <div class="px-4 pb-5 text-center text-white">
                 <a href>
                     <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BBFC_logo_%28new%29.svg/1200px-BBFC_logo_%28new%29.svg.png" alt="BBFC Logo" width="10%" />
                 </a>

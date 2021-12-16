@@ -8,7 +8,7 @@ import qalogo from "../resources/images/QACINEMA.png";
 const About = () => {
   return (
     <div>
-      <div class="container-fluid" id="bodyGradient">
+      <div class="container-fluid" id="about-hero">
         <div class="px-4 py-5 text-center text-white">
           <img
             class="d-block mx-auto mb-4"
