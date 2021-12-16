@@ -87,7 +87,10 @@ body {
 }
 
 #homeHero {
-    background-image: linear-gradient(to top, #000000, #1a141a, #242331, #223649, #0f4b5b, #005c67, #006d70, #117e75, #0f9085, #0ba396, #06b6a6, #00c9b7);
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1)), url('https://images.unsplash.com/photo-1596445836561-991bcd39a86d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 #navbar {

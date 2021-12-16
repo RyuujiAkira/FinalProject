@@ -6,6 +6,7 @@ import image12A from "../resources/images/BBFC_12A.png";
 import image12 from "../resources/images/BBFC_12.png";
 import image15 from "../resources/images/BBFC_15.png";
 import image18 from "../resources/images/BBFC_18.png";
+import bbfc from "../resources/images/BBFC.png";
 
 const Classifications = () => {
 
@@ -13,7 +14,7 @@ const Classifications = () => {
         <div class="container-fluid">
             <div class="px-4 py-5 text-center text-white">
                 <a href>
-                    <img class="d-block mx-auto mb-4" src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bb/BBFC_logo_%28new%29.svg/1200px-BBFC_logo_%28new%29.svg.png" alt="BBFC Logo" width="10%" />
+                    <img class="d-block mx-auto mb-4" src={bbfc} alt="BBFC Logo" width="15%" />
                 </a>
                 <h1 class="display-5 fw-bold">Classifications</h1>
                 <div class="col-lg-6 mx-auto">
