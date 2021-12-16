@@ -100,7 +100,7 @@ const Bookings = () => {
         <Form.Label class="label">Date</Form.Label>
         <Form.Control
           class="bookingfield"
-          type="datetime"
+          type="datetime-local"
           onChange={alterDate}
           id="date"
           ref={dateInput}
@@ -138,8 +138,8 @@ const Bookings = () => {
         <Form.Control
           class="bookingfield"
           type="number"
-          onChange={alterAdults}
-          id="adult"
+          onChange={alterChild}
+          id="child"
           ref={childInput}
         />
         <br />
