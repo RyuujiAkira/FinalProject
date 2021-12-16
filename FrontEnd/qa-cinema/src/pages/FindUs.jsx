@@ -19,10 +19,7 @@ const FindUs = () => {
             <div class="px-4 py-4 text-center text-white">
               <h2 class="py-4">Located Here <BsPinMapFill /></h2>
               <h4>
-                8, St James's Bldg,
-                Solihull,
-                Birmingham,
-                B94 7JH
+                8, St James's Bldg, 61-95 Oxford St, Manchester M1 6FQ
               </h4>
             </div>
           </div>

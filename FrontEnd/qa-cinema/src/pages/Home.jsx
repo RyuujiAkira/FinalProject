@@ -18,8 +18,8 @@ const Home = () => {
                     </div>
                 </div>
             </div>
-            <div class="container-fluid">
-                <Carousel>
+            <div class="container-fluid p-0">
+                <Carousel prevLabel={null} nextLabel={null} indicators={false}>
                     <Carousel.Item>
                         <img
                             className="d-block w-100"

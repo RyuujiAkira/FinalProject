@@ -1,4 +1,4 @@
-import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import { Navbar, Nav, Container, NavDropdown, Col } from "react-bootstrap";
 import Home from "../Home";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Listings from "../Listings";
@@ -21,23 +21,25 @@ const NavBar = () => {
     <Router>
       <div>
         <Navbar bg="light" expand="lg">
-          <Container>
-            <Navbar.Brand as={Link} to={"/"}>
-              <img
-                src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png"
-                id="navLogo"
-                alt="LOGO"
-              />
-              QA Cinema
-            </Navbar.Brand>
+          <Container fluid>
+            <Col>
+              <Navbar.Brand as={Link} to={"/"}>
+                <img
+                  src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png"
+                  id="navLogo"
+                  alt="LOGO"
+                />
+                QA Cinema
+              </Navbar.Brand>
+            </Col>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
-              <Nav className="me-auto">
-                <Nav.Link as={Link} to={"/"}>
+              <Nav className="mx-auto">
+                <Nav.Link className="mx-2" as={Link} to={"/"}>
                   Home
                 </Nav.Link>
 
-                <NavDropdown title="Movies" id="basic-nav-dropdown">
+                <NavDropdown className="mx-2" title="Movies" id="basic-nav-dropdown">
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
@@ -52,25 +54,25 @@ const NavBar = () => {
                   </NavDropdown.Item>
                 </NavDropdown>
 
-                <Nav.Link as={Link} to={"/about"}>
+                <Nav.Link className="mx-2" as={Link} to={"/about"}>
                   About
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/screens"}>
+                <Nav.Link className="mx-2" as={Link} to={"/screens"}>
                   Screens
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/contactus"}>
+                <Nav.Link className="mx-2" as={Link} to={"/contactus"}>
                   Contact Us
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/findUs"}>
+                <Nav.Link className="mx-2" as={Link} to={"/findUs"}>
                   Find Us
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/aroundUs"}>
+                <Nav.Link className="mx-2" as={Link} to={"/aroundUs"}>
                   Around Us
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/openingTimes"}>
+                <Nav.Link className="mx-2" as={Link} to={"/openingTimes"}>
                   Opening Times
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/classifications"}>
+                <Nav.Link className="mx-2" as={Link} to={"/classifications"}>
                   Classifications
                 </Nav.Link>
               </Nav>

@@ -91,7 +91,7 @@ const DiscussionCard = ({ movie, discussion }) => {
 
   return (
     <Card
-      className="card text-white glassCard mx-auto"
+      className="card text-white cardDisc mx-auto "
       style={{ height: "80%" }}
     >
       <Row>
