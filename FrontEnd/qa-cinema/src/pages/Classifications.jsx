@@ -1,5 +1,5 @@
 import { React } from "react";
-import { Accordion, Tab, Col, Nav, Row } from "react-bootstrap";
+import { Tab, Col, Nav, Row } from "react-bootstrap";
 import imageU from "../resources/images/BBFC_U.png";
 import imagePG from "../resources/images/BBFC_PG.png";
 import image12A from "../resources/images/BBFC_12A.png";
@@ -27,32 +27,32 @@ const Classifications = () => {
                     <Nav variant="pills" className="mx-auto">
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="first"><img src={imageU} alt="U Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="first"><img src={imageU} alt="BBFC U" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="second"><img src={imagePG} alt="PG Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="second"><img src={imagePG} alt="BBFC PG" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="third"><img src={image12A} alt="12A Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="third"><img src={image12A} alt="BBFC 12A" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="fourth"><img src={image12} alt="12 Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="fourth"><img src={image12} alt="BBFC 12" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="fifth"><img src={image15} alt="15 Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="fifth"><img src={image15} alt="BBFC 15" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                         <Col sm={2}>
                             <Nav.Item>
-                                <Nav.Link eventKey="sixth"><img src={image18} alt="18 Image" width="100em" /></Nav.Link>
+                                <Nav.Link eventKey="sixth"><img src={image18} alt="BBFC 18" width="100em" /></Nav.Link>
                             </Nav.Item>
                         </Col>
                     </Nav>
@@ -71,7 +71,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={imageU} alt="U Image" width="140em" />
+                                                                        <img src={imageU} alt="BBFC U" width="140em" />
                                                                         <div class="h3 fw-light my-5">U Universal - Suitable for all</div>
                                                                     </div>
                                                                 </div>
@@ -116,7 +116,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={imagePG} alt="PG Image" width="140em" />
+                                                                        <img src={imagePG} alt="BBFC PG" width="140em" />
                                                                         <div class="h3 fw-light my-5">PG Parental Guidance</div>
                                                                     </div>
                                                                 </div>
@@ -161,7 +161,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={image12A} alt="12A Image" width="140em" />
+                                                                        <img src={image12A} alt="BBFC 12A" width="140em" />
                                                                         <div class="h3 fw-light my-5">12A - Suitable for 12 years and over</div>
                                                                     </div>
                                                                 </div>
@@ -206,7 +206,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={image12} alt="12 Image" width="140em" />
+                                                                        <img src={image12} alt="BBFC 12" width="140em" />
                                                                         <div class="h3 fw-light my-5">12 - Suitable for 12 years and over</div>
                                                                     </div>
                                                                 </div>
@@ -251,7 +251,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={image15} alt="15 Image" width="140em" />
+                                                                        <img src={image15} alt="BBFC 15" width="140em" />
                                                                         <div class="h3 fw-light my-5">15 - Suitable only for 15 years and over</div>
                                                                     </div>
                                                                 </div>
@@ -296,7 +296,7 @@ const Classifications = () => {
                                                             <div class="container h-100">
                                                                 <div class="row h-100 align-items-center text-white">
                                                                     <div class="col text-center">
-                                                                        <img src={image18} alt="18 Image" width="140em" />
+                                                                        <img src={image18} alt="BBFC 18" width="140em" />
                                                                         <div class="h3 fw-light my-5">18 - Suitable only for adults</div>
                                                                     </div>
                                                                 </div>

@@ -1,47 +1,44 @@
 import React from "react";
+import QaLogo from "../../resources/images/QACINEMATRANS.png";
+import { TiSocialTwitter, TiSocialFacebook, TiSocialInstagram } from "react-icons/ti";
 
 const Footer = () => {
   return (
     <div class="main-footer mt-5 p-2">
       <div class="container" id="footer-container">
-        <div class="row">
-          <div class="col">
-            <h4>QA Cinema Inc</h4>
-
-            {/* <br></br> */}
-            <ul class="list-unstyled" >
-              <li>8, St James's Bldg</li>
-              <li>61-95 Oxford St,</li>
-              <li>Manchester M1 6FQ</li>
-            </ul>
+        <div class="row text-center">
+          <div class="col-auto">
+            <img src={QaLogo} width='100vw' alt="QA Logo" />
           </div>
-
-          <div class="col pt-5">
-            <ul>
+          <div class="col my-auto">
+            <p>Follow us here</p>
+            <h3>
+              <TiSocialTwitter /> <TiSocialInstagram /> <TiSocialFacebook />
+            </h3>
+          </div>
+          <div class="col-auto my-auto">
+            <ul class="my-auto" style={{ listStyleType: 'none' }}>
               <li>
-                <a href="http://localhost:3000/">Home Page</a>
+                <a href="http://localhost:3000/">Home</a>
               </li>
               <li>
-                {" "}
-                <a href="http://localhost:3000/about">About Us</a>
+                <a href="http://localhost:3000/about">About</a>
               </li>
               <li>
-                {" "}
                 <a href="http://localhost:3000/contactus">Contact Us</a>
               </li>
             </ul>
           </div>
         </div>
-
-        {/* <hr /> */}
-        <div class="row">
-          <p class="col-sm">
+        <hr />
+        <div class="row text-center">
+          <div class="col">
             &copy;{new Date().getFullYear()} QA CINEMA INC | All right reserved
-            | Terms Of Service | Privacy
-          </p>
+            | Terms Of Service | Privacy | Copyright © 2021
+          </div>
         </div>
       </div>
-    </div>
+    </div >
   );
 };
 

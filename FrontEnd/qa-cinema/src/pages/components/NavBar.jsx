@@ -23,14 +23,12 @@ const NavBar = () => {
         <Navbar bg="light" expand="lg">
           <Container>
             <Navbar.Brand as={Link} to={"/"}>
-
               <img
-                src="https://i.ibb.co/fCsstCb/QA-Logo-Turquoise.png"
+                src="https://i.ibb.co/7QzfRQ6/QACINEMATRANS.png"
                 id="navLogo"
                 alt="LOGO"
               />
-
-              Qa Cinema
+              QA Cinema
             </Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
@@ -43,7 +41,6 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/listings"}>
                     Listings
                   </NavDropdown.Item>
-
                   <NavDropdown.Item as={Link} to={"/upcoming"}>
                     Upcoming
                   </NavDropdown.Item>
@@ -53,7 +50,6 @@ const NavBar = () => {
                   <NavDropdown.Item as={Link} to={"/discussion"}>
                     Discussions
                   </NavDropdown.Item>
-                  <NavDropdown.Divider />
                 </NavDropdown>
 
                 <Nav.Link as={Link} to={"/about"}>
