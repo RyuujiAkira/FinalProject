@@ -5,10 +5,9 @@ const OpeningTimes = () => {
     return (
         <div>
             <div class="px-4">
-                <div class="overflow-hidden">
-                    <div class="container px-5">
-                        <img src="https://queensmere.shoppertainmentmanagement.co.uk/wp-content/uploads/2018/02/open_text.png" class="img-fluid" alt="Cinema screen" width="1100" height="900" loading="lazy" />
-                    </div>
+                <div class="text-center text-white container-fluid" id="opening-hero">
+                    <h1 class="display-4 fw-bold pt-5">Opening Times</h1>
+                    <p class="lead mt-4">Find out our opening days and times below!</p>
                 </div>
             </div>
 
