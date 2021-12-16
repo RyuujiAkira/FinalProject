@@ -141,8 +141,8 @@ const About = () => {
                     Junathan Abraham-Odukale
                   </Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Role</h6>
-                    Short description about yourself
+                    <h6 class="text-center">Front-end Developer</h6>
+                    QA Trainee that enjoys front-end development
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
@@ -169,8 +169,8 @@ const About = () => {
                 <Card.Body>
                   <Card.Title className="text-center">Adam Ateye</Card.Title>
                   <Card.Text>
-                    <h6 class="text-center">Role</h6>
-                    Short description about yourself
+                    <h6 class="text-center">Front-end Developer</h6>
+                    QA Trainee that enjoys front-end development
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">

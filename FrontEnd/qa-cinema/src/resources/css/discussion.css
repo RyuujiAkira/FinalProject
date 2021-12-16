@@ -6,7 +6,7 @@
     color: aliceblue;
 }
 
-.card {
+.cardDisc {
     backdrop-filter: blur(1px) saturate(19%);
     -webkit-backdrop-filter: blur(1px) saturate(19%);
     background-color: rgba(17, 25, 40, 0.07);

@@ -11,7 +11,7 @@ const Screens = () => {
         </div>
       </div>
       <div class="container">
-        <Carousel>
+        <Carousel prevLabel={null} nextLabel={null} indicators={false}>
           <Carousel.Item>
             <Card>
               <Card.Img
