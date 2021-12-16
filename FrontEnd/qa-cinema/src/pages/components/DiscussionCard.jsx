@@ -54,7 +54,8 @@ const DiscussionCard = ({ movie, discussion }) => {
       .catch((error) => {
         console.log(error);
       });
-    console.log(commentBuilder);
+
+    window.location.reload(false);
   };
   const styles = {
     container: {
@@ -106,7 +107,7 @@ const DiscussionCard = ({ movie, discussion }) => {
         <Col>
           <Card.Body>
             <h3>{movie.title}</h3>
-            <Form onSubmit={makeDiscussion}>
+            <Form onSubmit="return false">
               <div>
                 <input
                   type="text"
@@ -145,7 +146,11 @@ const DiscussionCard = ({ movie, discussion }) => {
                 })}
               </div>
 
-              <button type="submit" style={styles.button}>
+              <button
+                type="button"
+                onClick={makeDiscussion}
+                style={styles.button}
+              >
                 Submit
               </button>
             </Form>
