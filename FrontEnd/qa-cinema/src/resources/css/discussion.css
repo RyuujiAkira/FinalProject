@@ -1,111 +1,15 @@
-* {
-    margin: 0;
-    padding: 0%;
-}
-
-.test {
-    margin: 50px auto;
-}
-
-.test .row {
-    margin-top: 30px;
-}
-
-.col-md-4 {
-    margin: 40px auto;
-}
-
-.profile {
-    padding: 70px 10px 10px;
-    background-color: #efefef;
-}
-
-.profile img-responsive {
-    position: absolute;
-    left: calc(50% - 60px);
-    border: 10px solid white;
-}
-
-.user {
-    width: 120px;
-    height: 120px;
-    border-radius: 8px;
-}
-
-.profile h3 {
-    font-size: 20px;
-    margin-top: 15px;
-    color: #00C9B7;
-}
-
-span {
-    font-size: 12px;
-    color: #333;
-}
-
-blockquote {
-    font-size: 16px;
-    line-height: 30px;
-}
-
-.profile:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.btn {
-    text-decoration: none;
-    color: black;
-}
-
-h1, h5, ol {
-    margin: 0;
-}
-
-p {
-    margin: 5px 0;
-}
-
-.forum {
-    background-color: #f6f6ef;
-    padding: 10px 15px;
-}
-
-.bottom {
-    display: flex;
-    color: grey;
-}
-
-.timestamp {
-    padding-right: 10px;
-}
-
-.row1 {
-    padding: 5px;
-}
-
-.row1:hover {
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.2);
-    cursor: pointer;
-}
-
-.title {
-    text-align: left;
-}
-
-.btn h6 {
-    padding-left: 50px;
-}
-
-.btn img-responsive {
-    align-items: flex-start;
-    left: calc(50% - 60px);
-    border: 10px solid white;
-}
-
 #container {
     background-color: rgba(225, 225, 225, 0.1);
 }
-.discText{
+
+.discText {
     color: aliceblue;
+}
+
+.card {
+    backdrop-filter: blur(1px) saturate(19%);
+    -webkit-backdrop-filter: blur(1px) saturate(19%);
+    background-color: rgba(17, 25, 40, 0.07);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.125);
 }
