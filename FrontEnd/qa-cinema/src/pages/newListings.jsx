@@ -4,6 +4,7 @@ import Container from "react-bootstrap/Container";
 import { Col, Row } from "react-bootstrap";
 import UpcomingCard from "./components/UpcomingCard";
 import "../resources/css/upcoming.css";
+
 const NewListings = () => {
   const [error, setError] = useState(null);
 
