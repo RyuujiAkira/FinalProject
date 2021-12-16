@@ -87,7 +87,7 @@ const Bookings = () => {
       <h1 class="bookingHead">Make your Booking</h1>
       <br />
 
-      <form onSubmit={MakeBooking}>
+      <form onSubmit="return false">
         <Form.Label class="label">Movie Title</Form.Label>
         <Form.Control
           class="bookingfield"
@@ -153,7 +153,7 @@ const Bookings = () => {
         />
 
         <br />
-        <Button type="submit" id="data">
+        <Button type="button" onClick={MakeBooking} id="data">
           Book Now
         </Button>
       </form>
