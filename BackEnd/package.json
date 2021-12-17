@@ -1,0 +1,34 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Qa-cinema backend",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha",
+    "coverage": "nyc npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fraser-A-N-Smith/FinalProject.git"
+  },
+  "keywords": [
+    "qa-cinema"
+  ],
+  "author": "Kieran Goodinson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fraser-A-N-Smith/FinalProject/issues"
+  },
+  "homepage": "https://github.com/Fraser-A-N-Smith/FinalProject#readme",
+  "dependencies": {
+    "chai": "^4.3.4",
+    "chai-http": "^4.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "istanbul": "^0.4.5",
+    "mocha": "^9.1.3",
+    "mongoose": "^6.1.1",
+    "nodemon": "^2.0.15",
+    "nyc": "^15.1.0"
+  }
+}
