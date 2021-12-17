@@ -170,7 +170,7 @@ const About = () => {
                   <Card.Title className="text-center">Adam Ateye</Card.Title>
                   <Card.Text>
                     <h6 class="text-center">Front-end Developer</h6>
-                    QA Trainee that enjoys front-end development
+                    Likes watching anime in his spare time and working on front end development
                   </Card.Text>
                 </Card.Body>
                 <Card.Footer className="text-center">
