@@ -1,4 +1,7 @@
-#Qa-cinema Project
+#QA Cinema Project
+
+#Role
+My role on this project was to design and develop the front-end design of the website and hit the requirements of the brief to make a visually appeasing website while being accessible.
 
 #Technologies
 To build this product we implemented the MERN tech stack which includes, Mongoose, Express, React and Node alongside these we also used mocha and chai for testing
